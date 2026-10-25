@@ -1,0 +1,1960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhsin Muhammad A T</title>
+<meta name="description" content="Muhsin Muhammad A T, Network and Server Administrator, CCNA certified, aspiring full-stack developer from Kannur, Kerala.">
+<meta property="og:title" content="Muhsin Muhammad A T">
+<meta property="og:description" content="Network and Server Administrator, CCNA certified, Windows Server 2025 administration completed.">
+<meta property="og:type" content="website">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark console panels (hero, terminal, contact) set into a calm light or dark page.
+   Hero holds a live network topology you can tap. A working Cisco-style terminal sits mid-page. */
+:root {
+  --bg: #EDF1F6;
+  --surface: #FFFFFF;
+  --surface-2: #F5F8FC;
+  --ink: #0B1F3A;
+  --muted: #51617A;
+  --line: #CBD5E1;
+  --accent: #BF3F0A;
+  --ok: #1B7F4B;
+  --warn: #8F5F00;
+  --term-bg: #0B1F3A;
+  --term-fg: #DCE6F2;
+  --term-dim: #8EA3BF;
+  --term-line: #25405F;
+  --term-accent: #FF9A52;
+  --node: #14304F;
+  --node-line: #3A5C85;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #09131F;
+    --surface: #0F1D2E;
+    --surface-2: #14263B;
+    --ink: #E6EDF5;
+    --muted: #93A4BA;
+    --line: #22364D;
+    --accent: #FF9A52;
+    --ok: #4CC38A;
+    --warn: #E3B341;
+    --term-bg: #050C14;
+    --term-line: #1B2E44;
+    --node: #0D1D31;
+    --node-line: #2B4766;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #09131F;
+  --surface: #0F1D2E;
+  --surface-2: #14263B;
+  --ink: #E6EDF5;
+  --muted: #93A4BA;
+  --line: #22364D;
+  --accent: #FF9A52;
+  --ok: #4CC38A;
+  --warn: #E3B341;
+  --term-bg: #050C14;
+  --term-line: #1B2E44;
+  --node: #0D1D31;
+  --node-line: #2B4766;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 var(--body);
+  -webkit-text-size-adjust: 100%;
+}
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 16px 40px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, .node:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3, p, ul, dl, dd { margin: 0; }
+ul { padding: 0; list-style: none; }
+button { font-family: inherit; }
+
+.progress {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.brand { font: 500 13px/1.3 var(--mono); color: var(--muted); min-width: 0; overflow-wrap: anywhere; }
+.brand b { color: var(--accent); font-weight: 500; }
+.themebtn {
+  font: 500 12px/1 var(--mono);
+  min-height: 38px;
+  padding: 0 12px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  flex: none;
+}
+
+/* Hero */
+.hero {
+  background-color: var(--term-bg);
+  background-image: radial-gradient(var(--term-line) 1px, transparent 1px);
+  background-size: 18px 18px;
+  color: var(--term-fg);
+  border-radius: 10px;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+}
+@media (min-width: 800px) {
+  .hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); padding: 34px 30px; gap: 30px; align-items: center; }
+}
+.hero-text { display: flex; flex-direction: column; gap: 14px; min-width: 0; align-items: flex-start; }
+.where { font: 500 12px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--term-dim); }
+.hero h1 {
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 10vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.hero h1 span { color: var(--term-accent); }
+.hero .role { font-family: var(--display); font-weight: 600; font-size: 1.12rem; line-height: 1.35; color: var(--term-fg); text-wrap: balance; }
+.hero .lede { color: var(--term-dim); max-width: 44ch; }
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 500 12.5px/1.3 var(--mono);
+  padding: 7px 12px;
+  border: 1px solid var(--term-line);
+  border-radius: 4px;
+  color: var(--term-fg);
+}
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #4CC38A; animation: pulse 1.8s ease-out infinite; flex: none; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(76, 195, 138, 0.6); } 100% { box-shadow: 0 0 0 9px rgba(76, 195, 138, 0); } }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  font: 500 14px/1 var(--mono);
+  border-radius: 4px;
+  border: 1px solid var(--term-accent);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--term-accent);
+  transition: transform 0.15s;
+}
+.btn.primary { background: var(--term-accent); color: var(--term-bg); font-weight: 500; }
+.btn:hover { transform: translateY(-2px); }
+.hero a:focus-visible, .hero button:focus-visible, .contact a:focus-visible, .contact button:focus-visible, .cli button:focus-visible, .cli input:focus-visible { outline-color: var(--term-accent); }
+
+/* Topology */
+.topo { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.topo svg { width: 100%; height: auto; display: block; }
+.topo .link { stroke: var(--term-dim); stroke-width: 1.5; stroke-dasharray: 4 5; fill: none; animation: flow 1.2s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -9; } }
+.topo .ifc { fill: var(--term-dim); font: 400 8px var(--mono); }
+.topo .packet { fill: var(--term-accent); }
+.node { cursor: pointer; outline: none; }
+.node rect { fill: var(--node); stroke: var(--node-line); stroke-width: 1.2; transition: stroke 0.15s; }
+.node text { fill: var(--term-fg); font: 500 11px var(--mono); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.node:hover rect { stroke: var(--term-accent); }
+.node.on rect { stroke: var(--term-accent); stroke-width: 2; filter: drop-shadow(0 0 6px var(--term-accent)); }
+.node:focus-visible rect { stroke: var(--term-fg); stroke-width: 2; }
+.nodeinfo { border: 1px solid var(--term-line); border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(5, 12, 20, 0.35); }
+.nodeinfo h3 { font: 500 12px/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--term-accent); }
+.nodeinfo p { font-size: 14.5px; line-height: 1.5; color: var(--term-fg); }
+.hint { font: 11.5px/1.4 var(--mono); color: var(--term-dim); }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+@media (min-width: 640px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 2px; }
+.stat b { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 2rem; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.stat span { font: 12.5px/1.4 var(--mono); color: var(--muted); }
+
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.jump a {
+  font: 500 13px/1 var(--mono);
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 4px;
+  padding: 11px 13px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.jump a:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+/* Sections */
+.block { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 12px; }
+.eyebrow { font: 500 12px/1.4 var(--mono); color: var(--accent); letter-spacing: 0.04em; }
+.eyebrow::before { content: "#"; margin-right: 6px; color: var(--muted); }
+.block h2, .contact h2 { font-family: var(--display); font-stretch: 100%; font-weight: 800; font-size: 1.8rem; line-height: 1.1; letter-spacing: -0.01em; }
+.about { max-width: 65ch; }
+.about p + p { margin-top: 12px; }
+
+/* Terminal */
+.cli { background: var(--term-bg); color: var(--term-fg); border-radius: 8px; overflow: hidden; font: 13px/1.6 var(--mono); }
+.cli-bar { padding: 8px 14px; border-bottom: 1px solid var(--term-line); color: var(--term-dim); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+.cli-out { max-height: 300px; min-height: 180px; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 2px; overflow-wrap: anywhere; white-space: pre-wrap; }
+.cli-out .gap { height: 8px; }
+.c-dim { color: var(--term-dim); }
+.c-acc { color: var(--term-accent); }
+.c-ok { color: #4CC38A; }
+.c-warn { color: #E3B341; }
+.cli-form { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--term-line); }
+.cli-form label { color: var(--term-accent); flex: none; }
+.cli-form input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--term-fg); font: 16px/1.4 var(--mono); padding: 6px 0; outline: none; caret-color: var(--term-accent); }
+.cli-form input::placeholder { color: var(--term-dim); }
+.cli-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 14px; }
+.cli-chips button { font: 500 12px/1 var(--mono); min-height: 36px; padding: 0 11px; background: transparent; color: var(--term-fg); border: 1px solid var(--term-line); border-radius: 4px; cursor: pointer; }
+.cli-chips button:hover { border-color: var(--term-accent); color: var(--term-accent); }
+
+/* Tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tab { font: 500 13px/1 var(--mono); min-height: 40px; padding: 0 13px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+.tab:hover { border-color: var(--accent); }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.count { font: 12px/1.4 var(--mono); color: var(--muted); }
+
+/* Skills table */
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font: 500 11px/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 10px; border-bottom: 1px solid var(--line); }
+td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--surface-2); }
+td.port { font: 12px/1.7 var(--mono); color: var(--muted); white-space: nowrap; }
+td.stat-c { font: 12px/1.7 var(--mono); white-space: nowrap; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: var(--ok); }
+.dot.warn { background: var(--warn); }
+td small { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+
+/* Timeline */
+.timeline { border-left: 2px solid var(--line); margin-left: 6px; padding-left: 20px; display: flex; flex-direction: column; gap: 24px; }
+.tl { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.tl::before { content: ""; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+.tl h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; }
+.meta { font: 12.5px/1.5 var(--mono); color: var(--muted); }
+.bul { display: flex; flex-direction: column; gap: 4px; margin-top: 2px; }
+.bul li { position: relative; padding-left: 18px; max-width: 65ch; }
+.bul li::before { content: "\203A"; position: absolute; left: 4px; color: var(--accent); font-weight: 600; }
+
+/* Projects */
+.pgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
+@media (min-width: 700px) { .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.proj { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.2s, transform 0.2s; min-width: 0; }
+.proj:hover { border-color: var(--accent); transform: translateY(-2px); }
+.proj h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; }
+.proj .sum { font-size: 15px; color: var(--muted); }
+.toggle { align-self: flex-start; background: none; border: 0; color: var(--accent); font: 500 13px/1 var(--mono); min-height: 40px; padding: 0; cursor: pointer; }
+.toggle::after { content: " +"; }
+.toggle[aria-expanded="true"]::after { content: " \2212"; }
+.detail { display: flex; flex-direction: column; gap: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips li { padding: 3px 8px; font: 12px/1.5 var(--mono); color: var(--muted); border: 1px solid var(--line); border-radius: 3px; }
+.link { font: 500 14px/1.4 var(--mono); }
+
+/* Education */
+.pairs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.pairs div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pairs dt { font: 500 12px/1.4 var(--mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.pairs dd { font-weight: 500; }
+.pairs dd span { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+@media (min-width: 600px) { .pairs { grid-template-columns: 1fr 1fr; } }
+
+/* Contact */
+.contact { margin-top: 40px; background: var(--term-bg); color: var(--term-fg); border-radius: 10px; padding: 24px 16px; display: flex; flex-direction: column; gap: 16px; }
+.contact h2 { color: var(--term-fg); }
+.contact .eyebrow { color: var(--term-accent); }
+.contact .eyebrow::before { color: var(--term-dim); }
+.contact p { color: var(--term-dim); max-width: 55ch; }
+.crow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding-top: 14px; border-top: 1px solid var(--term-line); }
+.crow > div { min-width: 0; }
+.crow .lab { font: 11px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--term-dim); display: block; }
+.crow .val { font: 500 15px/1.5 var(--mono); color: var(--term-fg); overflow-wrap: anywhere; }
+.crow a.val { text-decoration: underline; text-underline-offset: 3px; }
+.copy { font: 500 12px/1 var(--mono); min-height: 40px; min-width: 80px; padding: 0 12px; background: transparent; color: var(--term-accent); border: 1px solid var(--term-accent); border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.contact a { color: var(--term-accent); }
+footer { margin-top: 24px; font: 12px/1.5 var(--mono); color: var(--muted); }
+
+/* Motion and effects. Anything that moves sits in the no-preference block at the end of this group. */
+.hero { position: relative; overflow: hidden; }
+.hero > * { position: relative; z-index: 1; }
+.hero::before { content: ""; position: absolute; z-index: 0; width: 360px; height: 360px; right: -90px; top: -120px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 154, 82, 0.26), transparent 65%); pointer-events: none; }
+[data-spot] { background-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, -30%), rgba(255, 154, 82, 0.16), transparent 70%); }
+.hero[data-spot] { background-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, -30%), rgba(255, 154, 82, 0.16), transparent 70%), radial-gradient(var(--term-line) 1px, transparent 1px); background-size: auto, 18px 18px; }
+.typer { font: 500 14px/1.5 var(--mono); color: var(--term-dim); min-height: 1.5em; overflow-wrap: anywhere; }
+.typer span:first-child { color: var(--term-accent); }
+.caret { display: inline-block; width: 0.55em; height: 1.05em; margin-left: 2px; vertical-align: text-bottom; background: var(--term-accent); }
+.ring { fill: none; stroke: var(--term-accent); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; pointer-events: none; }
+.ticker { margin-top: 14px; overflow: hidden; border-block: 1px solid var(--line); padding: 11px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.track { display: flex; width: max-content; }
+.track span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; font: 500 12px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.track span::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.rv { transform: translateY(28px); transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.rv.in { transform: none; }
+.proj, .stat { transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: border-color 0.2s, transform 0.15s ease-out; }
+.proj:hover { transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-3px); }
+.stat:hover { border-color: var(--accent); }
+.proj.rv, .stat.rv { transform: translateY(28px); transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.proj.rv.in, .stat.rv.in { transform: none; }
+.block h2::after { content: ""; display: block; width: 56px; height: 3px; margin-top: 8px; background: var(--accent); transform-origin: left; transform: scaleX(0.35); }
+.block.seen h2::after { transform: none; }
+.btn.primary { position: relative; overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero::before { animation: drift 14s ease-in-out infinite alternate; }
+  @keyframes drift { to { transform: translate(-70px, 60px) scale(1.15); } }
+  .hero h1 span { background: linear-gradient(90deg, var(--term-accent) 0%, #FFD9B8 45%, var(--term-accent) 90%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 5s linear infinite; }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+  .caret { animation: blink 1.1s steps(1) infinite; }
+  .track.go { animation: marquee 40s linear infinite; }
+  .ticker:hover .track.go { animation-play-state: paused; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  .hero-text > * { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero-text > :nth-child(2) { animation-delay: 0.06s; }
+  .hero-text > :nth-child(3) { animation-delay: 0.12s; }
+  .hero-text > :nth-child(4) { animation-delay: 0.18s; }
+  .hero-text > :nth-child(5) { animation-delay: 0.24s; }
+  .hero-text > :nth-child(6) { animation-delay: 0.3s; }
+  .hero-text > :nth-child(7) { animation-delay: 0.36s; }
+  .hero-text > :nth-child(8) { animation-delay: 0.42s; }
+  .topo { animation: rise 0.8s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  @keyframes rise { from { transform: translateY(18px); } to { transform: none; } }
+  .ring { animation: ring 2s ease-out infinite; }
+  @keyframes ring { from { transform: scale(0.75); opacity: 0.9; } to { transform: scale(1.9); opacity: 0; } }
+  .btn.primary::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent); transform: skewX(-20deg); animation: shine 4.5s ease-in-out infinite; }
+  @keyframes shine { 0%, 60% { left: -60%; } 100% { left: 130%; } }
+  .block h2::after { transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s; }
+  .pop { animation: popIn 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+  @keyframes popIn { from { transform: translateY(14px) scale(0.97); } to { transform: none; } }
+  tbody tr.pop td { animation: rowIn 0.35s ease backwards; }
+  @keyframes rowIn { from { transform: translateX(-10px); } to { transform: none; } }
+}
+
+/* Network journey: mesh background, cable dividers, hop tracker, connect toast */
+#mesh { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.45; }
+.wrap { padding-block: 16px 92px; }
+.block { position: relative; border-top: 0; }
+.block::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px); }
+.block::after { content: ""; position: absolute; top: -2px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0; }
+.live .eyebrow::after { content: "\25CF link up"; margin-left: 10px; color: var(--ok); }
+.contact.live .eyebrow::after { color: #4CC38A; }
+
+.hops { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; flex-direction: column; gap: 4px; padding: 8px max(16px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--surface); border-top: 1px solid var(--line); }
+.hlabel { font: 500 11px/1.3 var(--mono); color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hlabel b { color: var(--accent); font-weight: 500; }
+.htrack { position: relative; height: 24px; margin: 0 12px; }
+.hline { position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 10px); }
+.hfill { height: 100%; width: calc(var(--p, 0) * 100%); background: var(--accent); }
+.hpkt { position: absolute; z-index: 2; top: 50%; left: calc(var(--p, 0) * 100%); width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(255, 154, 82, 0.28); pointer-events: none; }
+.hn { position: absolute; z-index: 1; top: 50%; left: calc(var(--i) * 100%); width: 24px; height: 24px; margin: -12px 0 0 -12px; display: grid; place-items: center; }
+.hn i { width: 8px; height: 8px; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); }
+.hn.passed i, .hn.cur i { background: var(--accent); border-color: var(--accent); }
+.hn.cur i { transform: scale(1.35); }
+@media (min-width: 1100px) {
+  .wrap { padding-block: 16px 40px; }
+  .hops { left: auto; right: max(14px, env(safe-area-inset-right, 0px)); top: 50%; bottom: auto; transform: translateY(-50%); height: min(62vh, 440px); flex-direction: row; align-items: stretch; padding: 0; background: none; border: 0; }
+  .hlabel { display: none; }
+  .htrack { width: 24px; height: auto; margin: 12px 0; }
+  .hline { left: 50%; right: auto; top: 0; bottom: 0; width: 2px; height: auto; margin: 0 0 0 -1px; background: repeating-linear-gradient(180deg, var(--line) 0 6px, transparent 6px 10px); }
+  .hfill { width: 100%; height: calc(var(--p, 0) * 100%); }
+  .hpkt { left: 50%; top: calc(var(--p, 0) * 100%); margin: -5px 0 0 -5px; }
+  .hn { left: 50%; top: calc(var(--i) * 100%); margin: -12px 0 0 -12px; }
+  .hn.cur::before { content: attr(data-name); position: absolute; right: 30px; white-space: nowrap; font: 500 11px/1 var(--mono); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+}
+.boot { position: fixed; z-index: 40; top: calc(10px + env(safe-area-inset-top, 0px)); left: max(16px, env(safe-area-inset-left, 0px)); max-width: calc(100% - 32px); padding: 8px 12px; font: 500 12px/1.4 var(--mono); background: var(--term-bg); color: var(--term-fg); border: 1px solid var(--term-line); border-radius: 6px; pointer-events: none; transition: opacity 0.5s; }
+.boot b { color: var(--term-accent); font-weight: 500; }
+.boot.out { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .block.seen::after { animation: travel 1.4s ease-out; }
+  @keyframes travel { 0% { left: 0; opacity: 1; } 85% { opacity: 1; } 100% { left: calc(100% - 6px); opacity: 0; } }
+  .hn i { transition: background 0.25s, border-color 0.25s, transform 0.25s; }
+}
+
+/* Shared bits for the new sections */
+.where #clock { font-variant-numeric: tabular-nums; color: var(--term-accent); }
+.lead { color: var(--muted); max-width: 60ch; }
+.subhead { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 1.3rem; line-height: 1.25; margin-top: 12px; }
+.field-input { width: 100%; min-height: 46px; padding: 0 12px; font: 16px/1.4 var(--mono); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; }
+.btn2 { min-height: 44px; padding: 0 16px; font: 500 14px/1 var(--mono); border-radius: 4px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); cursor: pointer; align-self: flex-start; }
+.btn2.ghost { background: transparent; color: var(--accent); }
+.btn2:disabled { opacity: 0.4; cursor: default; }
+.ptag { font: 500 12px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 12px/1.4 var(--mono); color: var(--muted); }
+.k { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--muted); margin-right: 6px; vertical-align: -1px; }
+.k.hands { background: var(--accent); border-color: var(--accent); }
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+
+/* Skills map */
+.map { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; padding-top: 22px; border-top: 1px solid var(--line); }
+.mapbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.mapbar input { flex: 1 1 260px; width: auto; }
+.tgroup { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.tgroup h4 { margin: 0; font: 500 12px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.tchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.tchip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; font-size: 13.5px; line-height: 1.3; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; transition: opacity 0.15s, border-color 0.15s; }
+.tchip.dim { opacity: 0.22; }
+.tchip.hit { border-color: var(--accent); background: var(--surface-2); }
+
+/* Subnet calculator */
+.sn-inputs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+@media (min-width: 600px) { .sn-inputs { grid-template-columns: 1fr 1fr; } }
+.fld { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.fld > span { font: 500 12px/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.fld b { color: var(--accent); font-weight: 500; }
+.fld input[type="range"] { width: 100%; min-height: 46px; accent-color: var(--accent); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.presets .tab { min-height: 38px; }
+.sn-err { font: 13px/1.5 var(--mono); color: var(--warn); }
+.bits { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+.oct { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.oct .b { display: flex; gap: 2px; }
+.oct .b span { width: 14px; height: 26px; display: grid; place-items: center; font: 500 11px/1 var(--mono); border-radius: 3px; }
+.oct .b span.n { background: var(--accent); color: var(--bg); }
+.oct .b span.h { background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.oct .d { font: 500 12px/1 var(--mono); color: var(--muted); }
+.sn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.sn-grid div { background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; min-width: 0; }
+.sn-grid dt { font: 500 11px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sn-grid dd { margin: 2px 0 0; font: 500 15px/1.4 var(--mono); overflow-wrap: anywhere; }
+
+/* OSI */
+.osi { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+@media (min-width: 700px) { .osi { grid-template-columns: 230px minmax(0, 1fr); } }
+.osi-stack { display: flex; flex-direction: column; gap: 6px; }
+.osi-l { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; text-align: left; font: 500 14px/1.2 var(--body); background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; cursor: pointer; transition: border-color 0.15s; }
+.osi-l b { width: 20px; font: 500 12px/1 var(--mono); color: var(--muted); }
+.osi-l:hover { border-color: var(--accent); }
+.osi-l[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.osi-l[aria-pressed="true"] b { color: var(--bg); }
+.osi-pane { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.osi-pane h3 { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
+.osi-pane p { color: var(--muted); max-width: 55ch; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 14px; font-size: 14.5px; }
+.facts dt { font: 500 12px/1.6 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; }
+
+/* DHCP handshake */
+.dora-row { display: grid; grid-template-columns: 88px minmax(0, 1fr) 88px; gap: 8px; align-items: center; }
+.dnode { display: flex; flex-direction: column; gap: 2px; text-align: center; padding: 12px 6px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
+.dnode b { font-family: var(--display); font-weight: 700; font-size: 1rem; }
+.dnode span { font: 11px/1.3 var(--mono); color: var(--muted); }
+.dwire { position: relative; min-height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.dwire::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed var(--line); }
+.dpkt { position: relative; padding: 7px 9px; font: 500 11px/1 var(--mono); white-space: nowrap; border-radius: 4px; background: var(--accent); color: var(--bg); }
+.dpkt.go[data-dir="r"] { animation: slideR 0.55s ease-out; }
+.dpkt.go[data-dir="l"] { animation: slideL 0.55s ease-out; }
+@keyframes slideR { from { transform: translateX(-44px); } to { transform: none; } }
+@keyframes slideL { from { transform: translateX(44px); } to { transform: none; } }
+.dsteps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.dsteps li { text-align: center; padding: 8px 2px; font: 500 11px/1.2 var(--mono); border: 1px solid var(--line); border-radius: 4px; color: var(--muted); }
+.dsteps li.done { color: var(--ok); border-color: var(--ok); }
+.dsteps li.cur { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.dinfo { min-height: 4.8em; max-width: 60ch; }
+.dctl, .wctl { display: flex; flex-wrap: wrap; gap: 10px; }
+.dnote { font-size: 14px; color: var(--muted); max-width: 60ch; padding-top: 12px; border-top: 1px dashed var(--line); }
+
+/* Two-server walkthrough */
+.walk { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.wprog { height: 6px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.wbar { height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
+.wsteps { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.wtitle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 46px; padding: 6px 12px; text-align: left; font: 500 15px/1.3 var(--body); background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+.wn { flex: none; width: 26px; height: 26px; display: grid; place-items: center; font: 500 12px/1 var(--mono); border-radius: 50%; background: var(--bg); border: 1px solid var(--line); }
+.wstep.done .wn { background: var(--ok); border-color: var(--ok); color: var(--bg); }
+.wstep.cur .wtitle { border-color: var(--accent); }
+.wstep.cur .wn { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.wtext { padding: 10px 12px 4px 48px; color: var(--muted); font-size: 15px; max-width: 60ch; }
+.walk button:focus-visible, .tool button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wbar, .tchip, .osi-l { transition: none; }
+  .dpkt.go { animation: none !important; }
+}
+
+/* Hero badges */
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badges li { display: flex; align-items: center; gap: 6px; font: 500 12px/1.3 var(--mono); padding: 5px 10px; border: 1px solid var(--term-line); border-radius: 4px; color: var(--term-fg); }
+.badges li::before { content: "\2713"; color: #4CC38A; }
+
+/* Server administration */
+.course { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+@media (min-width: 640px) { .course { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
+.course-main { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.course h3 { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 1.3rem; line-height: 1.25; }
+.course p { color: var(--muted); max-width: 55ch; }
+.done { display: inline-flex; align-items: center; gap: 6px; width: fit-content; font: 500 12px/1.3 var(--mono); color: var(--ok); border: 1px solid var(--ok); border-radius: 4px; padding: 3px 9px; }
+.done::before { content: "\2713"; }
+.labstat { display: flex; gap: 10px; }
+.labstat li { display: flex; flex-direction: column; align-items: center; min-width: 88px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); }
+.labstat b { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 1.7rem; line-height: 1.1; }
+.labstat span { font: 12px/1.4 var(--mono); color: var(--muted); }
+.sm { background: var(--term-bg); color: var(--term-fg); border-radius: 10px; overflow: hidden; }
+.sm-bar { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--term-line); font: 11px/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--term-dim); }
+.sm-bar::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #4CC38A; }
+.sm-body { display: grid; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .sm-body { grid-template-columns: 240px minmax(0, 1fr); } }
+.sm-nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px; border-bottom: 1px solid var(--term-line); }
+@media (min-width: 700px) { .sm-nav { flex-direction: column; flex-wrap: nowrap; border-bottom: 0; border-right: 1px solid var(--term-line); } }
+.sm-item { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 12px; text-align: left; font: 500 13px/1.2 var(--mono); background: transparent; color: var(--term-fg); border: 1px solid var(--term-line); border-radius: 4px; cursor: pointer; transition: border-color 0.15s; }
+.sm-item i { width: 8px; height: 8px; border-radius: 50%; background: #4CC38A; flex: none; }
+.sm-item:hover { border-color: var(--term-accent); }
+.sm-item[aria-pressed="true"] { border-color: var(--term-accent); background: rgba(255, 154, 82, 0.12); color: var(--term-accent); }
+.sm button:focus-visible { outline: 2px solid var(--term-accent); outline-offset: 2px; }
+.sm-pane { padding: 20px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.sm-tag { font: 500 12px/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--term-accent); }
+.sm-pane h3 { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
+.sm-pane p { color: var(--term-dim); max-width: 55ch; }
+.sm-tasks { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.sm-tasks li { position: relative; padding-left: 18px; }
+.sm-tasks li::before { content: "\203A"; position: absolute; left: 4px; color: var(--term-accent); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sm-item { transition: none; }
+  .status i, .topo .link { animation: none; }
+  .btn, .jump a, .proj { transition: none; }
+  .btn:hover, .jump a:hover, .proj:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<nav class="hops" id="hops" aria-label="Page sections">
+  <span class="hlabel" id="hlabel">hop 1/10 &middot; Home</span>
+  <div class="htrack" id="htrack"><div class="hline"><div class="hfill"></div></div><span class="hpkt"></span></div>
+</nav>
+<main class="wrap" id="top">
+  <div class="topbar">
+    <span class="brand"><b>muhsin@kannur</b>:~$ portfolio</span>
+    <button class="themebtn" id="theme" type="button">Dark mode</button>
+  </div>
+
+  <header class="hero">
+    <div class="hero-text">
+      <span class="where">Kannur, Kerala &middot; India &middot; <span id="clock">IST</span></span>
+      <h1>Muhsin Muhammad <span>A T</span></h1>
+      <p class="role">Network and Server Administrator, CCNA certified, aspiring full-stack developer</p>
+      <p class="typer" aria-hidden="true"><span>Muhsin#</span> <span id="typed">configuring routers and switches</span><i class="caret"></i></p>
+      <p class="lede">I set up networks and servers, build web apps, and I am learning to secure them.</p>
+      <span class="status"><i></i>Open to work</span>
+      <ul class="badges" aria-label="Certifications"><li>Cisco CCNA</li><li>Windows Server 2025 administration</li></ul>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">WhatsApp me</a>
+        <a class="btn" href="#contact">All contact details</a>
+      </div>
+    </div>
+
+    <div class="topo">
+      <svg viewBox="0 0 360 230" role="group" aria-label="Network diagram of my lab setup. Select a device to read what I did with it.">
+        <path class="link" d="M180 36 L180 62"/>
+        <path class="link" d="M180 92 L180 122"/>
+        <path class="link" d="M180 152 L62 188"/>
+        <path class="link" d="M180 152 L180 188"/>
+        <path class="link" d="M180 152 L298 188"/>
+        <text class="ifc" x="186" y="52">Se0/0</text>
+        <text class="ifc" x="186" y="111">Gi0/1</text>
+        <text class="ifc" x="86" y="163">Fa0/1</text>
+        <text class="ifc" x="186" y="171">Fa0/2</text>
+        <text class="ifc" x="248" y="163">Fa0/3</text>
+        <circle class="packet" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" path="M180 36 L180 62"/></circle>
+        <circle class="packet" r="3"><animateMotion dur="1.6s" begin="0.4s" repeatCount="indefinite" path="M180 92 L180 122"/></circle>
+        <circle class="packet" r="3"><animateMotion dur="2s" begin="0.8s" repeatCount="indefinite" path="M180 152 L62 188"/></circle>
+        <circle class="packet" r="3"><animateMotion dur="2s" begin="1.2s" repeatCount="indefinite" path="M180 152 L298 188"/></circle>
+        <circle class="ring" id="ring" cx="180" cy="77" r="26"/>
+        <g class="node" data-key="wan" tabindex="0" role="button" aria-label="WAN"><rect x="140" y="8" width="80" height="28" rx="14"/><text x="180" y="22">WAN</text></g>
+        <g class="node on" data-key="r1" tabindex="0" role="button" aria-label="Router R1"><rect x="150" y="62" width="60" height="30" rx="6"/><text x="180" y="77">R1</text></g>
+        <g class="node" data-key="sw1" tabindex="0" role="button" aria-label="Switch SW1"><rect x="150" y="122" width="60" height="30" rx="6"/><text x="180" y="137">SW1</text></g>
+        <g class="node" data-key="srv" tabindex="0" role="button" aria-label="Windows server"><rect x="30" y="188" width="64" height="30" rx="6"/><text x="62" y="203">SRV</text></g>
+        <g class="node" data-key="pc1" tabindex="0" role="button" aria-label="Client PC 1"><rect x="148" y="188" width="64" height="30" rx="6"/><text x="180" y="203">PC1</text></g>
+        <g class="node" data-key="pc2" tabindex="0" role="button" aria-label="Client PC 2"><rect x="266" y="188" width="64" height="30" rx="6"/><text x="298" y="203">PC2</text></g>
+      </svg>
+      <div class="nodeinfo" aria-live="polite">
+        <h3 id="ni-title">R1 &middot; Router</h3>
+        <p id="ni-text">Router configuration and deployment in office networks during my time as Network Support Assistant, including password setting and recovery.</p>
+      </div>
+      <span class="hint">Tap a device to see what I did with it.</span>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="track" id="track">
+      <span>CCNA</span><span>Server administration</span><span>VLANs</span><span>Trunking</span><span>Subnetting</span><span>OSPF</span><span>STP</span><span>ACLs</span><span>NAT</span><span>DHCP</span><span>DNS</span><span>Active Directory</span><span>Group Policy</span><span>Windows Server 2025</span><span>Packet Tracer</span>
+    </div>
+  </div>
+
+  <section class="stats" aria-label="At a glance">
+    <div class="stat"><b class="count-up" data-to="2">2</b><span>CCNA and Windows Server 2025 completed</span></div>
+    <div class="stat"><b class="count-up" data-to="3">3</b><span>months in a network support role</span></div>
+    <div class="stat"><b class="count-up" data-to="6">6</b><span>projects built</span></div>
+    <div class="stat"><b class="count-up" data-to="3">3</b><span>languages: Malayalam, Hindi, English</span></div>
+  </section>
+
+  <nav class="jump" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#terminal">Terminal</a>
+    <a href="#skills">Skills</a>
+    <a href="#lab">Lab</a>
+    <a href="#server">Server</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="block" id="about">
+    <span class="eyebrow">show version</span>
+    <h2>About me</h2>
+    <div class="about">
+      <p>I am a Computer Science Engineering graduate from Kannur, Kerala, and a Cisco CCNA certified network and server administrator. I have worked with routers and switches in real office networks, built VLAN and WAN labs in Packet Tracer, and completed the Microsoft Windows Server 2025 administration course.</p>
+      <p>I studied networking end to end: addressing and subnetting, switching, routing, network services, security and wireless. I studied Windows Server administration the same way, including building a two-server setup with Active Directory, DNS, DHCP and Group Policy.</p>
+      <p>Alongside networking I build web apps, from fitness and diet trackers to a billing system for a local store. I am also learning cybersecurity, with the SOC analyst path as my goal.</p>
+      <p>I am looking for a Network Administrator, System Administrator or IT Support role.</p>
+    </div>
+  </section>
+
+  <section class="block" id="terminal">
+    <span class="eyebrow">telnet muhsin</span>
+    <h2>Ask my terminal</h2>
+    <div class="cli">
+      <div class="cli-bar">console0 &middot; type a command or tap one</div>
+      <div class="cli-out" id="cli-out" role="log" aria-live="polite"></div>
+      <form class="cli-form" id="cli-form" autocomplete="off">
+        <label for="cli-in">Muhsin#</label>
+        <input id="cli-in" type="text" placeholder="show skills" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Command">
+      </form>
+      <div class="cli-chips" id="cli-chips">
+        <button type="button" data-cmd="help">help</button>
+        <button type="button" data-cmd="show profile">show profile</button>
+        <button type="button" data-cmd="show skills">show skills</button>
+        <button type="button" data-cmd="show experience">show experience</button>
+        <button type="button" data-cmd="show networking">show networking</button>
+        <button type="button" data-cmd="show server">show server</button>
+        <button type="button" data-cmd="subnet 192.168.10.37/26">subnet 192.168.10.37/26</button>
+        <button type="button" data-cmd="show projects">show projects</button>
+        <button type="button" data-cmd="show contact">show contact</button>
+        <button type="button" data-cmd="clear">clear</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <span class="eyebrow">show interfaces status</span>
+    <h2>Skills</h2>
+    <div class="tabs" id="skill-tabs" role="group" aria-label="Filter skills">
+      <button class="tab" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="tab" type="button" data-f="net" aria-pressed="false">Networking</button>
+      <button class="tab" type="button" data-f="sys" aria-pressed="false">Systems</button>
+      <button class="tab" type="button" data-f="dev" aria-pressed="false">Dev</button>
+      <button class="tab" type="button" data-f="sec" aria-pressed="false">Security</button>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Port</th><th>Skill</th><th>Status</th></tr></thead>
+        <tbody id="skill-rows">
+          <tr data-c="net"><td class="port">Gi0/1</td><td>Cisco CCNA</td><td class="stat-c"><span class="dot"></span>certified</td></tr>
+          <tr data-c="net"><td class="port">Gi0/2</td><td>VLAN and trunking<small>Switch and router configuration</small></td><td class="stat-c"><span class="dot"></span>hands-on</td></tr>
+          <tr data-c="net"><td class="port">Gi0/3</td><td>LAN and WAN setup<small>Office networks and Packet Tracer labs</small></td><td class="stat-c"><span class="dot"></span>hands-on</td></tr>
+          <tr data-c="net"><td class="port">Gi0/4</td><td>Network troubleshooting<small>Router password recovery, connectivity faults</small></td><td class="stat-c"><span class="dot"></span>hands-on</td></tr>
+          <tr data-c="sys"><td class="port">Gi0/5</td><td>Server administration, Windows Server 2025<small>Completed course and a server and client lab</small></td><td class="stat-c"><span class="dot"></span>completed</td></tr>
+          <tr data-c="dev"><td class="port">Gi0/6</td><td>HTML, CSS, JavaScript<small>Single-file web apps hosted on GitHub Pages</small></td><td class="stat-c"><span class="dot"></span>hands-on</td></tr>
+          <tr data-c="dev"><td class="port">Gi0/7</td><td>Python and Flask<small>Backend of my final-year project</small></td><td class="stat-c"><span class="dot"></span>in projects</td></tr>
+          <tr data-c="dev"><td class="port">Gi0/8</td><td>OpenCV, ArcFace, DeepFace<small>Face matching from CCTV footage</small></td><td class="stat-c"><span class="dot"></span>in projects</td></tr>
+          <tr data-c="dev"><td class="port">Gi0/9</td><td>PostgreSQL</td><td class="stat-c"><span class="dot"></span>in projects</td></tr>
+          <tr data-c="sec"><td class="port">Gi0/10</td><td>Cybersecurity, SOC and SIEM</td><td class="stat-c"><span class="dot warn"></span>learning</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <span class="count" id="skill-count">Showing 10 of 10 ports</span>
+
+    <div class="map">
+      <h3 class="subhead">Skills I have</h3>
+      <div class="mapbar">
+        <input class="field-input" id="tsearch" type="search" placeholder="Search topics, for example OSPF or DHCP" aria-label="Search topics" autocomplete="off">
+        <span class="count" id="tcount"></span>
+      </div>
+      <div id="tmap"></div>
+    </div>
+  </section>
+
+  <section class="block" id="lab">
+    <span class="eyebrow">show ip interface brief</span>
+    <h2>Networking lab</h2>
+    <p class="lead">Small tools built from what I studied in networking. Try them.</p>
+    <div class="tabs" id="lab-tabs" role="group" aria-label="Lab tools">
+      <button class="tab" type="button" data-f="subnet" aria-pressed="true">Subnet calculator</button>
+      <button class="tab" type="button" data-f="osi" aria-pressed="false">OSI layers</button>
+      <button class="tab" type="button" data-f="dhcp" aria-pressed="false">DHCP handshake</button>
+    </div>
+
+    <div class="tool" id="tool-subnet">
+      <div class="sn-inputs">
+        <label class="fld"><span>IPv4 address</span><input class="field-input" id="sn-ip" type="text" inputmode="decimal" value="192.168.10.37" autocomplete="off" spellcheck="false"></label>
+        <label class="fld"><span>Prefix length <b id="sn-pl">/26</b></span><input id="sn-pfx" type="range" min="0" max="32" value="26"></label>
+      </div>
+      <div class="presets">
+        <button class="tab" type="button" data-p="24">/24</button>
+        <button class="tab" type="button" data-p="26">/26</button>
+        <button class="tab" type="button" data-p="28">/28</button>
+        <button class="tab" type="button" data-p="30">/30</button>
+      </div>
+      <p class="sn-err" id="sn-err" hidden>Enter an address like 192.168.10.37, with each part from 0 to 255.</p>
+      <div class="bits" id="sn-bits" aria-label="Address in binary"></div>
+      <p class="legend"><span><i class="k hands"></i>network bits</span><span><i class="k"></i>host bits</span></p>
+      <dl class="sn-grid" id="sn-grid"></dl>
+    </div>
+
+    <div class="tool" id="tool-osi" hidden>
+      <div class="osi">
+        <div class="osi-stack" id="osi-stack" role="group" aria-label="OSI layers"></div>
+        <div class="osi-pane" aria-live="polite">
+          <span class="ptag" id="osi-tag"></span>
+          <h3 id="osi-title"></h3>
+          <p id="osi-text"></p>
+          <dl class="facts" id="osi-facts"></dl>
+          <button class="btn2" id="osi-play" type="button">Play: send data down the stack</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool" id="tool-dhcp" hidden>
+      <div class="dora-row">
+        <div class="dnode"><b>Client</b><span>no address yet</span></div>
+        <div class="dwire"><span class="dpkt" id="dpkt">Ready</span></div>
+        <div class="dnode"><b>Server</b><span>DHCP role</span></div>
+      </div>
+      <ol class="dsteps" id="dsteps" aria-label="DHCP steps"></ol>
+      <p class="dinfo" id="dinfo" aria-live="polite"></p>
+      <div class="dctl">
+        <button class="btn2" id="d-next" type="button">Next step</button>
+        <button class="btn2 ghost" id="d-reset" type="button">Reset</button>
+      </div>
+      <p class="dnote">With two servers, DHCP failover lets both share one scope. In load balance mode both can answer clients. In hot standby only the active server answers and the other waits.</p>
+    </div>
+  </section>
+
+  <section class="block" id="server">
+    <span class="eyebrow">show windows-server</span>
+    <h2>Server administration</h2>
+    <div class="course">
+      <div class="course-main">
+        <span class="done">Completed</span>
+        <h3>Microsoft Windows Server 2025 administration</h3>
+        <p>I finished the course and practised on a small-office lab with one server and five to six client PCs.</p>
+      </div>
+      <ul class="labstat" aria-label="Lab setup">
+        <li><b>1</b><span>server</span></li>
+        <li><b>5&ndash;6</b><span>client PCs</span></li>
+      </ul>
+    </div>
+    <p class="count">Core areas of Windows Server administration. Select one to see what it does.</p>
+    <div class="sm">
+      <div class="sm-bar">Server Manager &middot; lab server</div>
+      <div class="sm-body">
+        <div class="sm-nav" id="sm-nav" role="group" aria-label="Server roles">
+          <button class="sm-item" type="button" data-k="ad" aria-pressed="true"><i></i>Active Directory</button>
+          <button class="sm-item" type="button" data-k="adc" aria-pressed="false"><i></i>Second domain controller</button>
+          <button class="sm-item" type="button" data-k="dns" aria-pressed="false"><i></i>DNS</button>
+          <button class="sm-item" type="button" data-k="dhcp" aria-pressed="false"><i></i>DHCP and failover</button>
+          <button class="sm-item" type="button" data-k="gpo" aria-pressed="false"><i></i>Group Policy</button>
+          <button class="sm-item" type="button" data-k="files" aria-pressed="false"><i></i>File services</button>
+          <button class="sm-item" type="button" data-k="web" aria-pressed="false"><i></i>IIS web server</button>        </div>
+        <div class="sm-pane" aria-live="polite">
+          <span class="sm-tag" id="sm-tag">Directory service</span>
+          <h3 id="sm-title">Active Directory</h3>
+          <p id="sm-what">Keeps every user, computer and group in an office in one place, so people sign in on any PC with one account.</p>
+          <ul class="sm-tasks" id="sm-tasks">
+            <li>Create user accounts and groups</li>
+            <li>Join client PCs to the domain</li>
+            <li>Reset passwords and unlock accounts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Walkthrough: a two-server domain lab</h3>
+    <div class="walk">
+      <div class="wprog" aria-hidden="true"><div class="wbar" id="wbar"></div></div>
+      <p class="count" id="wcount"></p>
+      <ol class="wsteps" id="wsteps"></ol>
+      <div class="wctl">
+        <button class="btn2 ghost" id="w-prev" type="button">Back</button>
+        <button class="btn2" id="w-next" type="button">Next step</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <span class="eyebrow">show logging</span>
+    <h2>Experience</h2>
+    <div class="timeline">
+      <article class="tl">
+        <h3>Network Support Assistant</h3>
+        <span class="meta">IT and networking company &middot; 3 months</span>
+        <ul class="bul">
+          <li>Assisted with router configuration and deployment in office networks.</li>
+          <li>Configured and implemented switches, including VLAN setup.</li>
+          <li>Set up LANs and troubleshot connectivity problems.</li>
+          <li>Set and reset router passwords through the recovery procedure.</li>
+        </ul>
+      </article>
+      <article class="tl">
+        <h3>Convener, industrial visit to Delhi</h3>
+        <span class="meta">College &middot; inter-state company visit</span>
+        <ul class="bul">
+          <li>Led and coordinated the whole batch of students for the trip and the company visit.</li>
+        </ul>
+      </article>
+      <article class="tl">
+        <h3>Lab work</h3>
+        <span class="meta">Self-driven practice</span>
+        <ul class="bul">
+          <li>Built many Packet Tracer projects covering VLANs, trunking, LAN and WAN links.</li>
+          <li>Configured a small-office Windows lab with one server and five to six clients.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <span class="eyebrow">show running-config</span>
+    <h2>Projects</h2>
+    <div class="tabs" id="proj-tabs" role="group" aria-label="Filter projects">
+      <button class="tab" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="tab" type="button" data-f="college" aria-pressed="false">College</button>
+      <button class="tab" type="button" data-f="web" aria-pressed="false">Web apps</button>
+    </div>
+    <div class="pgrid" id="pgrid">
+      <article class="proj" data-c="college">
+        <span class="meta">Final-year project</span>
+        <h3>Missing person identification</h3>
+        <p class="sum">Finds a missing person in CCTV footage by matching faces against a stored photo.</p>
+        <div class="detail" id="d1">
+          <p>Face embeddings are compared to match people across frames. A Flask backend handles requests and a custom interface shows the results.</p>
+          <ul class="chips"><li>Python</li><li>Flask</li><li>InsightFace / ArcFace</li><li>DeepFace</li><li>OpenCV</li><li>PostgreSQL</li></ul>
+        </div>
+        <button class="toggle" type="button" aria-expanded="true" aria-controls="d1">Details</button>
+      </article>
+
+      <article class="proj" data-c="college">
+        <span class="meta">College mini project &middot; government use</span>
+        <h3>Building registration system</h3>
+        <p class="sum">One system for registering buildings, de-registering them and keeping tax records.</p>
+        <div class="detail" id="d2" hidden>
+          <p>Automates the registration and de-registration of buildings and the tracking of their tax records, so officials work from a single source.</p>
+        </div>
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="d2">Details</button>
+      </article>
+
+      <article class="proj" data-c="web">
+        <span class="meta">Personal web app &middot; live</span>
+        <h3>Fitness tracker</h3>
+        <p class="sum">A dark, premium tracker for a 6-day push, pull and legs split.</p>
+        <div class="detail" id="d3" hidden>
+          <p>Includes a steps ring, sleep logger and streak calendar. Everything is saved in the browser, so it works without an account.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li></ul>
+          <a class="link" href="https://muhsinmusi560.github.io" target="_blank" rel="noopener">Open the live app &#8599;</a>
+        </div>
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="d3">Details</button>
+      </article>
+
+      <article class="proj" data-c="web">
+        <span class="meta">Personal web app</span>
+        <h3>KeralaDiet</h3>
+        <p class="sum">A calorie and diet tracker built around Kerala food.</p>
+        <div class="detail" id="d4" hidden>
+          <p>A large food database built around Kerala meals, including Malabar street food. Has a calorie ring, water tracker and streak counter on a mobile-first interface.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="d4">Details</button>
+      </article>
+
+      <article class="proj" data-c="web">
+        <span class="meta">For M Ummerkutty Store</span>
+        <h3>Store billing system</h3>
+        <p class="sum">A point-of-sale page for a fruit, vegetable, bakery, grocery and stationery shop.</p>
+        <div class="detail" id="d5" hidden>
+          <p>Weighed items use a daily editable rate per kg, and entering either weight or price fills in the other. It prints a receipt and shares the bill as an image on WhatsApp.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="d5">Details</button>
+      </article>
+
+      <article class="proj" data-c="web">
+        <span class="meta">Personal web app</span>
+        <h3>Daily routine tracker</h3>
+        <p class="sum">A habit and daily routine tracker that saves progress on the device.</p>
+        <div class="detail" id="d6" hidden>
+          <p>Tick off the day's habits and keep a streak, with all data stored locally in the browser.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li></ul>
+        </div>
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="d6">Details</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="education">
+    <span class="eyebrow">show flash:</span>
+    <h2>Education and certificates</h2>
+    <dl class="pairs">
+      <div><dt>Degree</dt><dd>BTech, Computer Science Engineering<span>APJ Abdul Kalam Technological University (KTU), 2019 scheme, Kannur</span></dd></div>
+      <div><dt>Certificate</dt><dd>Cisco Certified Network Associate (CCNA)<span>Routing, switching and network fundamentals</span></dd></div>
+      <div><dt>Course</dt><dd>Microsoft Windows Server 2025 administration<span>Completed</span></dd></div>
+      <div><dt>Languages</dt><dd>Malayalam, Hindi (fluent), English</dd></div>
+    </dl>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <span class="eyebrow">ping muhsin</span>
+    <h2 id="contact-h">Let's talk</h2>
+    <p>Hiring for a network or system administration role, or have a web project in mind? Send me a message.</p>
+    <div class="crow">
+      <div><span class="lab">WhatsApp</span><span class="val">+91 77365 43153</span></div>
+      <a class="copy" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">Open chat</a>
+    </div>
+    <div class="crow">
+      <div><span class="lab">Email</span><a class="val" id="v-email" href="mailto:muhsinmuhammad7831@gmail.com">muhsinmuhammad7831@gmail.com</a></div>
+      <button class="copy" type="button" data-copy="muhsinmuhammad7831@gmail.com" data-target="v-email">Copy</button>
+    </div>
+    <div class="crow">
+      <div><span class="lab">Phone</span><a class="val" id="v-phone" href="tel:+917736543153">+91 77365 43153</a></div>
+      <button class="copy" type="button" data-copy="+91 77365 43153" data-target="v-phone">Copy</button>
+    </div>
+    <div class="crow">
+      <div><span class="lab">Based in</span><span class="val">Kannur, Kerala, India</span></div>
+    </div>
+    <div class="crow">
+      <div><span class="lab">GitHub</span><a class="val" href="https://github.com/muhsinmusi560" target="_blank" rel="noopener">github.com/muhsinmusi560</a></div>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Muhsin Muhammad A T &middot; <a href="#top">Back to top</a></footer>
+</main>
+
+<script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var rm = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  var root = document.documentElement;
+
+  /* Theme toggle */
+  var tbtn = $("#theme");
+  function effective() {
+    var t = root.getAttribute("data-theme");
+    if (t) return t;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  function themeLabel() { tbtn.textContent = effective() === "dark" ? "Light mode" : "Dark mode"; }
+  try {
+    var saved = localStorage.getItem("mm-theme");
+    if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
+  } catch (e) {}
+  themeLabel();
+  tbtn.addEventListener("click", function () {
+    var next = effective() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("mm-theme", next); } catch (e) {}
+    themeLabel();
+    readColors();
+  });
+
+  /* Scroll progress */
+  var bar = $("#progress");
+  var ticking = false;
+  function updateBar() {
+    var h = root.scrollHeight - window.innerHeight;
+    var p = h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
+    bar.style.transform = "scaleX(" + p + ")";
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
+  }, { passive: true });
+  updateBar();
+
+  /* Topology */
+  if (rm) { $$("animateMotion").forEach(function (n) { n.parentNode.removeChild(n); }); $$(".packet").forEach(function (n) { n.parentNode.removeChild(n); }); }
+  var NODES = {
+    wan: ["WAN · Wide area link", "WAN links between sites, configured and tested in my Packet Tracer labs."],
+    r1: ["R1 · Router", "Router configuration and deployment in office networks during my time as Network Support Assistant, including password setting and recovery."],
+    sw1: ["SW1 · Switch", "Switch configuration and implementation in offices, with VLANs and trunking built in lab and on the job."],
+    srv: ["SRV · Windows Server 2025", "Completed a Windows Server 2025 administration course and built a small-office lab with one server and five to six clients."],
+    pc1: ["PC1 · Client", "LAN setup for client machines and troubleshooting when they could not reach the network."],
+    pc2: ["PC2 · Client", "LAN setup for client machines and troubleshooting when they could not reach the network."]
+  };
+  var nodeEls = $$(".node");
+  function pick(el) {
+    var d = NODES[el.getAttribute("data-key")];
+    if (!d) return;
+    nodeEls.forEach(function (n) { n.classList.remove("on"); });
+    el.classList.add("on");
+    var rc = el.querySelector("rect");
+    var ringEl = $("#ring");
+    if (rc && ringEl) {
+      var rw = parseFloat(rc.getAttribute("width"));
+      ringEl.setAttribute("cx", parseFloat(rc.getAttribute("x")) + rw / 2);
+      ringEl.setAttribute("cy", parseFloat(rc.getAttribute("y")) + parseFloat(rc.getAttribute("height")) / 2);
+      ringEl.setAttribute("r", Math.round(rw / 2 - 2));
+    }
+    $("#ni-title").textContent = d[0];
+    $("#ni-text").textContent = d[1];
+  }
+  nodeEls.forEach(function (el) {
+    el.addEventListener("click", function () { pick(el); });
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(el); }
+    });
+  });
+
+  /* Counters */
+  var counters = $$(".count-up");
+  function animateCounter(el) {
+    var to = parseInt(el.getAttribute("data-to"), 10);
+    var start = null;
+    var dur = 900;
+    function step(ts) {
+      if (start === null) start = ts;
+      var t = Math.min(1, (ts - start) / dur);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = String(Math.round(to * eased));
+      if (t < 1) requestAnimationFrame(step); else el.textContent = String(to);
+    }
+    el.textContent = "0";
+    requestAnimationFrame(step);
+  }
+  if (!rm && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { animateCounter(en.target); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { io.observe(c); });
+  }
+
+  /* Terminal */
+  var out = $("#cli-out");
+  var input = $("#cli-in");
+  var history = [];
+  var hpos = 0;
+
+  function pad(k, n) { var s = k + " "; while (s.length < n) s += "."; return s + " "; }
+  function line(html) { var d = document.createElement("div"); d.innerHTML = html; out.appendChild(d); }
+  function gap() { var d = document.createElement("div"); d.className = "gap"; out.appendChild(d); }
+  function echo(text) {
+    var d = document.createElement("div");
+    var p = document.createElement("span");
+    p.className = "c-acc";
+    p.textContent = "Muhsin#";
+    d.appendChild(p);
+    d.appendChild(document.createTextNode(" " + text));
+    out.appendChild(d);
+  }
+  function kv(rows, w) {
+    rows.forEach(function (r) { line('<span class="c-dim">' + pad(r[0], w || 13) + "</span>" + r[1]); });
+  }
+
+  var CMDS = {
+    help: function () {
+      line('<span class="c-dim">Available commands:</span>');
+      kv([
+        ["show profile", "who I am"],
+        ["show skills", "what I can do"],
+        ["show experience", "where I have worked"],
+        ["show networking", "what I studied in networking"],
+        ["show server", "my server administration course"],
+        ["subnet <ip>/<n>", "calculate a subnet, try subnet 10.0.0.5/24"],
+        ["show projects", "what I have built"],
+        ["show contact", "how to reach me"],
+        ["clear", "wipe the screen"]
+      ], 20);
+    },
+    profile: function () {
+      kv([
+        ["Name", "Muhsin Muhammad A T"],
+        ["Role", "Network and Server Administrator"],
+        ["Certified", "Cisco CCNA"],
+        ["Completed", "Windows Server 2025 administration"],
+        ["Degree", "BTech, Computer Science Engineering"],
+        ["Location", "Kannur, Kerala, India"],
+        ["Languages", "Malayalam, Hindi, English"],
+        ["Status", '<span class="c-ok">open to work</span>']
+      ]);
+    },
+    skills: function () {
+      line('<span class="c-ok">[certified]</span>   Cisco CCNA');
+      line('<span class="c-ok">[hands-on]</span>    VLAN, trunking, LAN and WAN');
+      line('<span class="c-ok">[hands-on]</span>    Router and switch configuration');
+      line('<span class="c-ok">[hands-on]</span>    HTML, CSS, JavaScript');
+      line('<span class="c-ok">[completed]</span>   Windows Server 2025 course');
+      line('<span class="c-ok">[in projects]</span> Python, Flask, OpenCV, PostgreSQL');
+      line('<span class="c-warn">[learning]</span>    Cybersecurity, SOC and SIEM');
+    },
+    experience: function () {
+      line('<span class="c-acc">Network Support Assistant</span> <span class="c-dim">(3 months)</span>');
+      line("  Router deployment, switch setup, VLANs, LAN setup and troubleshooting in offices.");
+      gap();
+      line('<span class="c-acc">Convener, industrial visit to Delhi</span> <span class="c-dim">(college)</span>');
+      line("  Led the whole batch on an inter-state company visit.");
+    },
+    networking: function () {
+      line('<span class="c-acc">Fundamentals</span> OSI and TCP/IP, cabling, IPv4, IPv6, subnetting, VLSM, TCP and UDP, wireless basics');
+      line('<span class="c-acc">Switching</span> VLANs, trunking, inter-VLAN routing, STP, RSTP, EtherChannel, port security, CDP, LLDP');
+      line('<span class="c-acc">Routing</span> static and default routes, RIP, OSPF, EIGRP, administrative distance, WAN');
+      line('<span class="c-acc">Services</span> DHCP, DNS, NAT, PAT, NTP, SNMP, syslog, SSH, Telnet, QoS basics');
+      line('<span class="c-acc">Security</span> ACLs, AAA and VPN concepts, layer 2 security');
+      line('<span class="c-acc">Tools</span> Cisco Packet Tracer, LAN setup, router and switch configuration');
+      line('<span class="c-dim">Try: subnet 192.168.10.37/26</span>');
+    },
+    server: function () {
+      line('<span class="c-ok">[completed]</span> Microsoft Windows Server 2025 administration');
+      line('<span class="c-dim">Skills:</span> two-server setup, Active Directory, DNS, DHCP and failover, Group Policy, file services, user and group management, Remote Desktop, IIS, backup and recovery, Windows updates');
+      line('<span class="c-dim">Lab:</span> one server and five to six client PCs');
+      line('<span class="c-dim">Open the Server administration section to explore the roles.</span>');
+    },
+    projects: function () {
+      line('<span class="c-acc">1</span> Missing person identification <span class="c-dim">(final-year, face matching on CCTV)</span>');
+      line('<span class="c-acc">2</span> Building registration system <span class="c-dim">(college mini project)</span>');
+      line('<span class="c-acc">3</span> Fitness tracker <span class="c-dim">(live web app)</span>');
+      line('<span class="c-acc">4</span> KeralaDiet <span class="c-dim">(Kerala food tracker)</span>');
+      line('<span class="c-acc">5</span> Store billing system <span class="c-dim">(weight and unit pricing, receipts)</span>');
+      line('<span class="c-acc">6</span> Daily routine tracker');
+    },
+    contact: function () {
+      kv([
+        ["Email", "muhsinmuhammad7831@gmail.com"],
+        ["Phone", "+91 77365 43153"],
+        ["GitHub", "github.com/muhsinmusi560"]
+      ]);
+    }
+  };
+  var TOPICS = ["profile", "skills", "networking", "experience", "server", "projects", "contact"];
+
+  function resolve(raw) {
+    var s = raw.trim().toLowerCase().replace(/\s+/g, " ");
+    if (!s) return null;
+    if (s === "?" || s === "help") return "help";
+    if (s === "clear" || s === "cls") return "clear";
+    if (s === "whoami") return "profile";
+    var parts = s.split(" ");
+    var arg = null;
+    if (/^sh(o(w)?)?$/.test(parts[0])) arg = parts[1] || "";
+    else if (parts.length === 1) arg = parts[0];
+    if (arg === null || arg === "") return "invalid";
+    var m = TOPICS.filter(function (t) { return t.indexOf(arg) === 0; });
+    if (m.length === 1 && parts.length <= 2) return m[0];
+    return "invalid";
+  }
+
+  function run(raw, fromChip) {
+    var trimmed = raw.trim();
+    if (/^subnet\b/i.test(trimmed)) {
+      var sm = trimmed.match(/^subnet\s+(\d{1,3}(?:\.\d{1,3}){3})\/(\d{1,2})$/i);
+      echo(trimmed);
+      var res = sm ? calc(sm[1], parseInt(sm[2], 10)) : null;
+      if (!res) {
+        line('<span class="c-warn">% Usage: subnet 192.168.10.37/26</span>');
+      } else {
+        kv([
+          ["Network", ipStr(res.net) + "/" + res.pfx],
+          ["Mask", ipStr(res.mask)],
+          ["Broadcast", ipStr(res.bc)],
+          ["Usable range", ipStr(res.first) + " to " + ipStr(res.last)],
+          ["Usable hosts", res.hosts.toLocaleString()],
+          ["Type", "Class " + res.cls + ", " + res.kind.toLowerCase()]
+        ], 15);
+      }
+      gap();
+      out.scrollTop = out.scrollHeight;
+      if (!fromChip) { history.push(trimmed); hpos = history.length; }
+      return;
+    }
+    var r = resolve(raw);
+    if (r === null) return;
+    if (r === "clear") { out.innerHTML = ""; return; }
+    echo(raw.trim());
+    if (r === "invalid") {
+      line('<span class="c-warn">% Invalid input detected at \'^\' marker.</span>');
+      line('<span class="c-dim">Type help or tap a command below.</span>');
+    } else {
+      CMDS[r]();
+    }
+    gap();
+    out.scrollTop = out.scrollHeight;
+    if (!fromChip) { history.push(raw.trim()); hpos = history.length; }
+  }
+
+  $("#cli-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    run(input.value, false);
+    input.value = "";
+  });
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowUp" && history.length) {
+      e.preventDefault();
+      hpos = Math.max(0, hpos - 1);
+      input.value = history[hpos] || "";
+    } else if (e.key === "ArrowDown" && history.length) {
+      e.preventDefault();
+      hpos = Math.min(history.length, hpos + 1);
+      input.value = history[hpos] || "";
+    }
+  });
+  $$("#cli-chips button").forEach(function (b) {
+    b.addEventListener("click", function () { run(b.getAttribute("data-cmd"), true); });
+  });
+  echo("show profile");
+  CMDS.profile();
+  gap();
+  line('<span class="c-dim">Type help or tap a command below.</span>');
+
+  /* Skill filter */
+  var srows = $$("#skill-rows tr");
+  var scount = $("#skill-count");
+  var stabs = $$("#skill-tabs .tab");
+  stabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      var f = t.getAttribute("data-f");
+      stabs.forEach(function (x) { x.setAttribute("aria-pressed", x === t ? "true" : "false"); });
+      var shown = 0;
+      srows.forEach(function (r) {
+        var on = f === "all" || r.getAttribute("data-c") === f;
+        r.hidden = !on;
+        r.classList.remove("pop");
+        if (on) { void r.offsetWidth; r.classList.add("pop"); shown++; }
+      });
+      scount.textContent = "Showing " + shown + " of " + srows.length + " ports";
+    });
+  });
+
+  /* Project filter and details */
+  var cards = $$("#pgrid .proj");
+  var ptabs = $$("#proj-tabs .tab");
+  ptabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      var f = t.getAttribute("data-f");
+      ptabs.forEach(function (x) { x.setAttribute("aria-pressed", x === t ? "true" : "false"); });
+      cards.forEach(function (c) {
+        var on = f === "all" || c.getAttribute("data-c") === f;
+        c.hidden = !on;
+        c.classList.remove("pop");
+        if (on) { void c.offsetWidth; c.classList.add("pop"); }
+      });
+    });
+  });
+  $$(".toggle").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var open = b.getAttribute("aria-expanded") === "true";
+      b.setAttribute("aria-expanded", open ? "false" : "true");
+      var d = document.getElementById(b.getAttribute("aria-controls"));
+      if (d) d.hidden = open;
+    });
+  });
+
+  /* Hop tracker: scrolling the page is a traceroute through the sections */
+  var HOPS = [["top", "Home"], ["about", "About"], ["terminal", "Terminal"], ["skills", "Skills"], ["lab", "Lab"], ["server", "Server"], ["experience", "Work"], ["projects", "Projects"], ["education", "Education"], ["contact", "Contact"]];
+  var hopsEl = $("#hops");
+  var htrack = $("#htrack");
+  var hlabel = $("#hlabel");
+  var hnodes = [];
+  var liveEls = [];
+  var tops = [];
+  var curHop = -1;
+  var hopTick = false;
+  HOPS.forEach(function (h, i) {
+    var a = document.createElement("a");
+    a.className = "hn";
+    a.href = "#" + h[0];
+    a.setAttribute("aria-label", h[1]);
+    a.setAttribute("data-name", h[1]);
+    a.style.setProperty("--i", String(i / (HOPS.length - 1)));
+    a.appendChild(document.createElement("i"));
+    htrack.appendChild(a);
+    hnodes.push(a);
+    var el = i === 0 ? null : document.getElementById(h[0]);
+    liveEls.push(el);
+    if (el) {
+      var eb = el.querySelector(".eyebrow");
+      if (eb) eb.textContent = "hop " + (i + 1 < 10 ? "0" : "") + (i + 1) + " · " + eb.textContent;
+    }
+  });
+  function measureHops() {
+    tops = HOPS.map(function (h, i) {
+      if (i === 0) return 0;
+      var el = document.getElementById(h[0]);
+      return el ? el.getBoundingClientRect().top + window.scrollY : 0;
+    });
+  }
+  function updateHops() {
+    hopTick = false;
+    measureHops();
+    var y = window.scrollY + window.innerHeight * 0.35;
+    var atEnd = window.scrollY + window.innerHeight >= root.scrollHeight - 4;
+    var idx = 0;
+    for (var i = 0; i < tops.length; i++) { if (y >= tops[i]) idx = i; }
+    var frac = 0;
+    if (atEnd) { idx = tops.length - 1; }
+    else if (idx < tops.length - 1) {
+      var span = tops[idx + 1] - tops[idx];
+      frac = span > 0 ? Math.min(1, Math.max(0, (y - tops[idx]) / span)) : 0;
+    }
+    hopsEl.style.setProperty("--p", ((idx + frac) / (tops.length - 1)).toFixed(4));
+    if (idx !== curHop) {
+      curHop = idx;
+      hnodes.forEach(function (n, j) {
+        n.classList.toggle("passed", j < idx);
+        n.classList.toggle("cur", j === idx);
+        if (j === idx) n.setAttribute("aria-current", "location"); else n.removeAttribute("aria-current");
+      });
+      liveEls.forEach(function (el, j) { if (el) el.classList.toggle("live", j === idx); });
+      hlabel.innerHTML = "<b>hop " + (idx + 1) + "/" + HOPS.length + "</b> · " + HOPS[idx][1] + " · ttl " + (64 - idx);
+    }
+  }
+  function queueHops() { if (!hopTick) { hopTick = true; requestAnimationFrame(updateHops); } }
+  window.addEventListener("scroll", queueHops, { passive: true });
+  window.addEventListener("resize", queueHops);
+  window.addEventListener("load", queueHops);
+  updateHops();
+
+  /* Network mesh behind the page */
+  var mesh = document.createElement("canvas");
+  mesh.id = "mesh";
+  mesh.setAttribute("aria-hidden", "true");
+  document.body.insertBefore(mesh, document.body.firstChild);
+  var mctx = mesh.getContext ? mesh.getContext("2d") : null;
+  var mW = 0, mH = 0, mPts = [], mPkts = [], mLast = 0, mSpawn = 0, mRaf = null, mTimer = null;
+  var mouse = { x: -999, y: -999 };
+  var colLine = "#51617A";
+  var colDot = "#BF3F0A";
+  function readColors() {
+    var cs = getComputedStyle(root);
+    colLine = cs.getPropertyValue("--muted").trim() || colLine;
+    colDot = cs.getPropertyValue("--accent").trim() || colDot;
+    if (rm && mctx) drawMesh(0, true);
+  }
+  function resizeMesh() {
+    if (!mctx) return;
+    var dpr = Math.min(2, window.devicePixelRatio || 1);
+    mW = window.innerWidth;
+    mH = window.innerHeight;
+    mesh.width = Math.round(mW * dpr);
+    mesh.height = Math.round(mH * dpr);
+    mctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.max(16, Math.min(44, Math.round(mW * mH / 26000)));
+    while (mPts.length < n) mPts.push({ x: Math.random() * mW, y: Math.random() * mH, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4 });
+    mPts.length = n;
+    mPts.forEach(function (p) { if (p.x > mW) p.x = Math.random() * mW; if (p.y > mH) p.y = Math.random() * mH; });
+    if (rm) drawMesh(0, true);
+  }
+  function drawMesh(ts, still) {
+    var dt = still ? 0 : Math.min(40, ts - mLast || 16);
+    mLast = ts;
+    mctx.clearRect(0, 0, mW, mH);
+    var i, j, p, q, dx, dy, d;
+    for (i = 0; i < mPts.length; i++) {
+      p = mPts[i];
+      p.x += p.vx * dt / 16;
+      p.y += p.vy * dt / 16;
+      if (p.x < 0 || p.x > mW) p.vx *= -1;
+      if (p.y < 0 || p.y > mH) p.vy *= -1;
+    }
+    mctx.lineWidth = 1;
+    mctx.strokeStyle = colLine;
+    for (i = 0; i < mPts.length; i++) {
+      p = mPts[i];
+      for (j = i + 1; j < mPts.length; j++) {
+        q = mPts[j];
+        dx = p.x - q.x;
+        dy = p.y - q.y;
+        d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 130) {
+          mctx.globalAlpha = (1 - d / 130) * 0.4;
+          mctx.beginPath();
+          mctx.moveTo(p.x, p.y);
+          mctx.lineTo(q.x, q.y);
+          mctx.stroke();
+        }
+      }
+    }
+    mctx.strokeStyle = colDot;
+    for (i = 0; i < mPts.length; i++) {
+      p = mPts[i];
+      dx = p.x - mouse.x;
+      dy = p.y - mouse.y;
+      d = Math.sqrt(dx * dx + dy * dy);
+      if (d < 150) {
+        mctx.globalAlpha = (1 - d / 150) * 0.7;
+        mctx.beginPath();
+        mctx.moveTo(p.x, p.y);
+        mctx.lineTo(mouse.x, mouse.y);
+        mctx.stroke();
+      }
+    }
+    mctx.globalAlpha = 0.6;
+    mctx.fillStyle = colLine;
+    for (i = 0; i < mPts.length; i++) {
+      p = mPts[i];
+      mctx.beginPath();
+      mctx.arc(p.x, p.y, 2, 0, 6.2832);
+      mctx.fill();
+    }
+    if (!still) {
+      if (ts - mSpawn > 900 && mPkts.length < 4 && mPts.length) {
+        mSpawn = ts;
+        var a = mPts[Math.floor(Math.random() * mPts.length)];
+        var best = null;
+        var bd = 130;
+        mPts.forEach(function (b) {
+          if (b === a) return;
+          var ddx = a.x - b.x, ddy = a.y - b.y, dd = Math.sqrt(ddx * ddx + ddy * ddy);
+          if (dd < bd) { bd = dd; best = b; }
+        });
+        if (best) mPkts.push({ a: a, b: best, t: 0 });
+      }
+      mctx.fillStyle = colDot;
+      mPkts = mPkts.filter(function (k) {
+        k.t += dt / 650;
+        if (k.t >= 1) return false;
+        mctx.globalAlpha = 0.9;
+        mctx.beginPath();
+        mctx.arc(k.a.x + (k.b.x - k.a.x) * k.t, k.a.y + (k.b.y - k.a.y) * k.t, 3, 0, 6.2832);
+        mctx.fill();
+        return true;
+      });
+    }
+    mctx.globalAlpha = 1;
+    if (!still) mRaf = requestAnimationFrame(drawMesh);
+  }
+  if (mctx) {
+    readColors();
+    resizeMesh();
+    window.addEventListener("resize", function () { clearTimeout(mTimer); mTimer = setTimeout(resizeMesh, 150); });
+    if (!rm) {
+      mRaf = requestAnimationFrame(drawMesh);
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) { if (mRaf) cancelAnimationFrame(mRaf); mRaf = null; }
+        else if (!mRaf) { mLast = 0; mRaf = requestAnimationFrame(drawMesh); }
+      });
+      window.addEventListener("pointermove", function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+      window.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") { mouse.x = -999; mouse.y = -999; } }, { passive: true });
+      root.addEventListener("mouseleave", function () { mouse.x = -999; mouse.y = -999; });
+    }
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener) mq.addEventListener("change", readColors);
+    }
+  }
+
+  /* Connect toast on arrival */
+  if (!rm) {
+    var boot = document.createElement("div");
+    boot.className = "boot";
+    boot.setAttribute("aria-hidden", "true");
+    var BM = ["DHCP discover...", "DHCP offer received", "Lease acquired: 192.168.10.37", "Link up, 1 Gbps full duplex"];
+    var bi = 0;
+    var bootStep = function () {
+      boot.innerHTML = "<b>eth0</b> ";
+      boot.appendChild(document.createTextNode(BM[bi]));
+    };
+    document.body.appendChild(boot);
+    bootStep();
+    var bt = setInterval(function () {
+      bi++;
+      if (bi >= BM.length) {
+        clearInterval(bt);
+        setTimeout(function () {
+          boot.classList.add("out");
+          setTimeout(function () { if (boot.parentNode) boot.parentNode.removeChild(boot); }, 700);
+        }, 1200);
+        return;
+      }
+      bootStep();
+    }, 650);
+  }
+
+  /* Typing line in the hero */
+  var typed = $("#typed");
+  var PHR = ["configuring routers and switches", "building domain servers", "setting up DHCP and DNS", "shipping web apps"];
+  var tpi = 0;
+  var tmode = "del";
+  function typeCycle() {
+    var cur = typed.textContent;
+    if (tmode === "del") {
+      if (cur.length > 0) { typed.textContent = cur.slice(0, -1); setTimeout(typeCycle, 28); return; }
+      tpi = (tpi + 1) % PHR.length;
+      tmode = "type";
+      setTimeout(typeCycle, 220);
+      return;
+    }
+    var target = PHR[tpi];
+    if (cur.length < target.length) { typed.textContent = target.slice(0, cur.length + 1); setTimeout(typeCycle, 55); return; }
+    tmode = "del";
+    setTimeout(typeCycle, 2200);
+  }
+  if (!rm && typed) setTimeout(typeCycle, 2400);
+
+  /* Ticker */
+  var track = $("#track");
+  if (track && !rm) { track.innerHTML += track.innerHTML; track.classList.add("go"); }
+
+  /* Cursor spotlight on the dark panels */
+  if (!rm) {
+    $$(".hero, .contact, .cli, .sm").forEach(function (el) {
+      el.setAttribute("data-spot", "");
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        el.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
+  }
+
+  /* Tilt on cards, mouse only */
+  if (!rm && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+    $$(".proj, .stat").forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        if (e.pointerType !== "mouse") return;
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty("--ry", (px * 8) + "deg");
+        el.style.setProperty("--rx", (-py * 8) + "deg");
+      });
+      el.addEventListener("pointerleave", function () {
+        el.style.setProperty("--rx", "0deg");
+        el.style.setProperty("--ry", "0deg");
+      });
+    });
+  }
+
+  /* Scroll reveal: content stays visible, it only settles into place */
+  var blocks = $$(".block");
+  if (rm || !("IntersectionObserver" in window)) {
+    blocks.forEach(function (b) { b.classList.add("seen"); });
+  } else {
+    var items = $$(".proj, .stat, .tl, .tgroup, .crow, .course, .walk, .tool, .sm, .cli, .tablewrap, .about");
+    items.forEach(function (el) {
+      var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.transitionDelay = (Math.min(idx, 6) * 70) + "ms";
+      el.classList.add("rv");
+    });
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        rio.unobserve(el);
+        if (el.classList.contains("block")) { el.classList.add("seen"); return; }
+        el.classList.add("in");
+        setTimeout(function () { el.classList.remove("rv", "in"); el.style.transitionDelay = ""; }, 1500);
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" });
+    blocks.forEach(function (b) { rio.observe(b); });
+    items.forEach(function (el) { rio.observe(el); });
+  }
+
+  /* Live clock, Kannur time */
+  var clockEl = $("#clock");
+  function tickClock() {
+    try {
+      clockEl.textContent = new Intl.DateTimeFormat("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true, timeZone: "Asia/Kolkata" }).format(new Date()) + " IST";
+    } catch (e) { clockEl.textContent = "IST"; }
+  }
+  tickClock();
+  setInterval(tickClock, 1000);
+
+  /* Skills map with search */
+  var MAP = [
+    ["Network fundamentals", [["OSI and TCP/IP models", 0], ["Ethernet and cabling", 0], ["IPv4 addressing", 0], ["IPv6 addressing", 0], ["Subnetting and VLSM", 0], ["TCP and UDP", 0], ["Switches, routers and firewalls", 0], ["Wireless basics", 0]]],
+    ["Switching", [["VLANs", 1], ["Trunking (802.1Q)", 1], ["Inter-VLAN routing", 0], ["STP and RSTP", 0], ["EtherChannel", 0], ["Port security", 0], ["CDP and LLDP", 0]]],
+    ["Routing", [["Static and default routes", 0], ["RIP", 0], ["OSPF", 0], ["EIGRP", 0], ["Administrative distance", 0], ["WAN configuration", 1]]],
+    ["IP services", [["DHCP", 0], ["DNS", 0], ["NAT and PAT", 0], ["NTP", 0], ["SNMP and syslog", 0], ["QoS basics", 0], ["SSH and Telnet", 0]]],
+    ["Network security", [["Access control lists", 0], ["Device hardening", 1], ["Password setting and recovery", 1], ["AAA and VPN concepts", 0], ["Layer 2 security", 0]]],
+    ["Tools and practice", [["Cisco IOS CLI", 1], ["Cisco Packet Tracer", 1], ["Router and switch configuration", 1], ["LAN setup", 1], ["Network troubleshooting", 1]]],
+    ["Windows Server", [["Active Directory Domain Services", 1], ["Second domain controller", 1], ["DNS server", 1], ["DHCP server and failover", 1], ["Group Policy", 1], ["File server and permissions", 1], ["User and group management", 0], ["Remote Desktop", 0], ["IIS web server", 0], ["Backup and recovery", 0], ["Windows updates", 0]]]
+  ];
+  var tmap = $("#tmap");
+  var tsearch = $("#tsearch");
+  var tcount = $("#tcount");
+  var chipEls = [];
+  MAP.forEach(function (g) {
+    var wrap = document.createElement("div");
+    wrap.className = "tgroup";
+    var h = document.createElement("h4");
+    h.textContent = g[0];
+    wrap.appendChild(h);
+    var row = document.createElement("div");
+    row.className = "tchips";
+    g[1].forEach(function (it) {
+      var s = document.createElement("span");
+      s.className = "tchip";
+      s.textContent = it[0];
+      row.appendChild(s);
+      chipEls.push(s);
+    });
+    wrap.appendChild(row);
+    tmap.appendChild(wrap);
+  });
+  function filterMap() {
+    var q = tsearch.value.trim().toLowerCase();
+    var n = 0;
+    chipEls.forEach(function (c) {
+      var hit = q !== "" && c.textContent.toLowerCase().indexOf(q) !== -1;
+      var match = q === "" || hit;
+      c.classList.toggle("dim", !match);
+      c.classList.toggle("hit", hit);
+      if (match) n++;
+    });
+    tcount.textContent = q ? n + " of " + chipEls.length + " topics match" : chipEls.length + " topics";
+  }
+  tsearch.addEventListener("input", filterMap);
+  filterMap();
+
+  /* Subnet calculator */
+  function ipInt(s) {
+    var p = s.trim().split(".");
+    if (p.length !== 4) return null;
+    var n = 0;
+    for (var i = 0; i < 4; i++) {
+      if (!/^\d{1,3}$/.test(p[i]) || parseInt(p[i], 10) > 255) return null;
+      n = n * 256 + parseInt(p[i], 10);
+    }
+    return n;
+  }
+  function ipStr(n) {
+    return [Math.floor(n / 16777216) % 256, Math.floor(n / 65536) % 256, Math.floor(n / 256) % 256, n % 256].join(".");
+  }
+  function calc(ipText, pfx) {
+    var ip = ipInt(ipText);
+    if (ip === null || isNaN(pfx) || pfx < 0 || pfx > 32) return null;
+    var size = Math.pow(2, 32 - pfx);
+    var net = Math.floor(ip / size) * size;
+    var bc = net + size - 1;
+    var first, last, hosts;
+    if (pfx === 32) { first = ip; last = ip; hosts = 1; }
+    else if (pfx === 31) { first = net; last = bc; hosts = 2; }
+    else { first = net + 1; last = bc - 1; hosts = size - 2; }
+    var o1 = Math.floor(ip / 16777216);
+    var o2 = Math.floor(ip / 65536) % 256;
+    var cls = o1 < 128 ? "A" : o1 < 192 ? "B" : o1 < 224 ? "C" : o1 < 240 ? "D (multicast)" : "E (reserved)";
+    var kind = "Public";
+    if (o1 === 10 || (o1 === 172 && o2 >= 16 && o2 <= 31) || (o1 === 192 && o2 === 168)) kind = "Private";
+    else if (o1 === 127) kind = "Loopback";
+    else if (o1 === 169 && o2 === 254) kind = "Link-local (APIPA)";
+    else if (o1 >= 224) kind = "Not for hosts";
+    return { ip: ip, pfx: pfx, net: net, bc: bc, mask: 4294967296 - size, wild: size - 1, first: first, last: last, hosts: hosts, cls: cls, kind: kind };
+  }
+  var snIp = $("#sn-ip");
+  var snPfx = $("#sn-pfx");
+  var snPl = $("#sn-pl");
+  var snBits = $("#sn-bits");
+  var snGrid = $("#sn-grid");
+  var snErr = $("#sn-err");
+  function bitsHtml(ip, pfx) {
+    var h = "";
+    for (var o = 0; o < 4; o++) {
+      var val = Math.floor(ip / Math.pow(256, 3 - o)) % 256;
+      h += '<div class="oct"><div class="b">';
+      for (var b = 0; b < 8; b++) {
+        h += '<span class="' + (o * 8 + b < pfx ? "n" : "h") + '">' + ((val >> (7 - b)) & 1) + "</span>";
+      }
+      h += '</div><span class="d">' + val + "</span></div>";
+    }
+    return h;
+  }
+  function renderSubnet() {
+    var pfx = parseInt(snPfx.value, 10);
+    snPl.textContent = "/" + pfx;
+    var r = calc(snIp.value, pfx);
+    if (!r) { snErr.hidden = false; return; }
+    snErr.hidden = true;
+    snBits.innerHTML = bitsHtml(r.ip, pfx);
+    var rows = [
+      ["Network address", ipStr(r.net) + "/" + pfx],
+      ["Broadcast address", ipStr(r.bc)],
+      ["Subnet mask", ipStr(r.mask)],
+      ["Wildcard mask", ipStr(r.wild)],
+      ["First usable host", ipStr(r.first)],
+      ["Last usable host", ipStr(r.last)],
+      ["Usable hosts", r.hosts.toLocaleString()],
+      ["Class and type", "Class " + r.cls + ", " + r.kind.toLowerCase()]
+    ];
+    snGrid.innerHTML = rows.map(function (x) { return "<div><dt>" + x[0] + "</dt><dd>" + x[1] + "</dd></div>"; }).join("");
+  }
+  snIp.addEventListener("input", renderSubnet);
+  snPfx.addEventListener("input", renderSubnet);
+  $$(".presets .tab").forEach(function (b) {
+    b.addEventListener("click", function () { snPfx.value = b.getAttribute("data-p"); renderSubnet(); });
+  });
+  renderSubnet();
+
+  /* OSI layers */
+  var OSI = [
+    [7, "Application", "Data", "HTTP, DNS, DHCP, SSH, FTP", "Hosts, firewalls", "Gives network services to the apps you use.", "Your data, like a web request, is created."],
+    [6, "Presentation", "Data", "TLS, JPEG, ASCII", "Hosts", "Formats, compresses and encrypts data so both sides can read it.", "The data is formatted and encrypted."],
+    [5, "Session", "Data", "NetBIOS, RPC", "Hosts", "Opens, manages and closes the conversation between two devices.", "A session between the two devices is opened."],
+    [4, "Transport", "Segment", "TCP, UDP", "Hosts, firewalls", "Splits data into segments, adds port numbers and decides how reliable delivery must be.", "TCP or UDP adds port numbers. The data becomes a segment."],
+    [3, "Network", "Packet", "IP, ICMP, OSPF", "Routers, layer 3 switches", "Adds logical addresses and picks the path between networks.", "IP adds source and destination addresses. The segment becomes a packet."],
+    [2, "Data link", "Frame", "Ethernet, 802.1Q, STP", "Switches, network cards", "Moves frames across one local network using MAC addresses.", "Ethernet adds MAC addresses and an error check. The packet becomes a frame."],
+    [1, "Physical", "Bits", "Copper, fibre, radio", "Cables, hubs, access points", "Sends the raw bits as electrical, light or radio signals.", "The frame leaves the network card as bits on the wire."]
+  ];
+  var osiStack = $("#osi-stack");
+  var osiBtns = [];
+  var osiTimer = null;
+  var playBtn = $("#osi-play");
+  function showOsi(i) {
+    var L = OSI[i];
+    var osiPane = $(".osi-pane");
+    osiPane.classList.remove("pop");
+    void osiPane.offsetWidth;
+    osiPane.classList.add("pop");
+    osiBtns.forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+    $("#osi-tag").textContent = "Layer " + L[0];
+    $("#osi-title").textContent = L[1];
+    $("#osi-text").textContent = L[5];
+    var facts = [["Data unit", L[2]], ["Protocols", L[3]], ["Devices", L[4]], ["Sending", L[6]]];
+    var dl = $("#osi-facts");
+    dl.innerHTML = "";
+    facts.forEach(function (f) {
+      var dt = document.createElement("dt");
+      dt.textContent = f[0];
+      var dd = document.createElement("dd");
+      dd.textContent = f[1];
+      dl.appendChild(dt);
+      dl.appendChild(dd);
+    });
+  }
+  function stopPlay() {
+    if (osiTimer) { clearInterval(osiTimer); osiTimer = null; }
+    playBtn.textContent = "Play: send data down the stack";
+  }
+  OSI.forEach(function (L, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "osi-l";
+    b.setAttribute("aria-pressed", "false");
+    var n = document.createElement("b");
+    n.textContent = L[0];
+    b.appendChild(n);
+    b.appendChild(document.createTextNode(L[1]));
+    b.addEventListener("click", function () { stopPlay(); showOsi(i); });
+    osiStack.appendChild(b);
+    osiBtns.push(b);
+  });
+  playBtn.addEventListener("click", function () {
+    if (osiTimer) { stopPlay(); return; }
+    var i = 0;
+    showOsi(0);
+    playBtn.textContent = "Stop";
+    osiTimer = setInterval(function () {
+      i++;
+      if (i >= OSI.length) { stopPlay(); return; }
+      showOsi(i);
+    }, 1500);
+  });
+  showOsi(0);
+
+  /* DHCP handshake */
+  var DORA = [
+    ["Discover", "DISCOVER →", "r", "The client has no address, so it asks everyone on the network if a DHCP server is there. It sends a broadcast from 0.0.0.0 to 255.255.255.255."],
+    ["Offer", "← OFFER", "l", "The server picks a free address from its scope and offers it, for example 192.168.10.50, with a mask, gateway, DNS server and lease time."],
+    ["Request", "REQUEST →", "r", "The client accepts the offer and asks for that address. This is also a broadcast, so any other DHCP server learns its offer was not taken."],
+    ["Ack", "← ACK", "l", "The server confirms the lease. The client now uses 192.168.10.50 until the lease runs out, then it renews."]
+  ];
+  var dsteps = $("#dsteps");
+  var dpkt = $("#dpkt");
+  var dinfo = $("#dinfo");
+  var dNext = $("#d-next");
+  var dItems = [];
+  var dStep = -1;
+  DORA.forEach(function (s) {
+    var li = document.createElement("li");
+    li.textContent = s[0];
+    dsteps.appendChild(li);
+    dItems.push(li);
+  });
+  function renderDora() {
+    dItems.forEach(function (li, i) { li.className = i < dStep ? "done" : (i === dStep ? "cur" : ""); });
+    dpkt.classList.remove("go");
+    if (dStep < 0) {
+      dpkt.textContent = "Ready";
+      dpkt.removeAttribute("data-dir");
+      dinfo.textContent = "A new PC joins the network with no address. Press Next step to watch it get one. The addresses shown are examples.";
+      dNext.textContent = "Next step";
+      return;
+    }
+    var s = DORA[dStep];
+    dpkt.textContent = s[1];
+    dpkt.setAttribute("data-dir", s[2]);
+    void dpkt.offsetWidth;
+    dpkt.classList.add("go");
+    dinfo.textContent = "Step " + (dStep + 1) + " of 4. " + s[3];
+    dNext.textContent = dStep === 3 ? "Run again" : "Next step";
+  }
+  dNext.addEventListener("click", function () { dStep = dStep >= 3 ? -1 : dStep + 1; renderDora(); });
+  $("#d-reset").addEventListener("click", function () { dStep = -1; renderDora(); });
+  renderDora();
+
+  /* Lab tabs */
+  var labTabs = $$("#lab-tabs .tab");
+  labTabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      var f = t.getAttribute("data-f");
+      stopPlay();
+      labTabs.forEach(function (x) { x.setAttribute("aria-pressed", x === t ? "true" : "false"); });
+      ["subnet", "osi", "dhcp"].forEach(function (k) {
+        var el = $("#tool-" + k);
+        el.hidden = k !== f;
+        el.classList.remove("pop");
+        if (k === f) { void el.offsetWidth; el.classList.add("pop"); }
+      });
+    });
+  });
+
+  /* Two-server walkthrough */
+  var WALK = [
+    ["Install Windows Server on both servers", "Install Windows Server 2025 on SRV1 and SRV2 and give each one a clear computer name."],
+    ["Set static IP addresses", "Give each server a fixed address in the same subnet. Point DNS on both at SRV1 for now."],
+    ["Make SRV1 the first domain controller", "Add the Active Directory Domain Services and DNS roles on SRV1, then promote it to a domain controller of a new forest."],
+    ["Check the DNS zones", "Confirm the forward and reverse lookup zones exist and that the server resolves its own domain name."],
+    ["Install and authorize DHCP on SRV1", "Add the DHCP role, authorize it in Active Directory and create a scope with the gateway and DNS options."],
+    ["Add SRV2 as a second domain controller", "Join SRV2 to the domain and promote it as an additional domain controller so the directory replicates between both."],
+    ["Set up DHCP failover", "Install DHCP on SRV2 and configure failover for the scope, so both servers share it and clients still get addresses if one fails."],
+    ["Join the client PCs", "Clients receive addresses from DHCP, join the domain and sign in with domain accounts."],
+    ["Apply Group Policy and shared folders", "Link a policy to an organizational unit, then create shared folders with permissions for each group."]
+  ];
+  var wSteps = $("#wsteps");
+  var wItems = [];
+  var wIdx = 0;
+  WALK.forEach(function (s, i) {
+    var li = document.createElement("li");
+    li.className = "wstep";
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "wtitle";
+    var n = document.createElement("span");
+    n.className = "wn";
+    n.textContent = String(i + 1);
+    b.appendChild(n);
+    b.appendChild(document.createTextNode(s[0]));
+    b.addEventListener("click", function () { wIdx = i; renderWalk(); });
+    var d = document.createElement("div");
+    d.className = "wtext";
+    d.textContent = s[1];
+    li.appendChild(b);
+    li.appendChild(d);
+    wSteps.appendChild(li);
+    wItems.push({ li: li, btn: b, txt: d });
+  });
+  function renderWalk() {
+    wItems.forEach(function (it, i) {
+      it.li.className = "wstep" + (i < wIdx ? " done" : "") + (i === wIdx ? " cur" : "");
+      it.btn.setAttribute("aria-expanded", i === wIdx ? "true" : "false");
+      it.txt.hidden = i !== wIdx;
+    });
+    $("#wbar").style.width = ((wIdx + 1) / WALK.length * 100) + "%";
+    $("#wcount").textContent = "Step " + (wIdx + 1) + " of " + WALK.length;
+    $("#w-prev").disabled = wIdx === 0;
+    $("#w-next").disabled = wIdx === WALK.length - 1;
+    $("#w-next").textContent = wIdx === WALK.length - 1 ? "Lab complete" : "Next step";
+  }
+  $("#w-prev").addEventListener("click", function () { if (wIdx > 0) { wIdx--; renderWalk(); } });
+  $("#w-next").addEventListener("click", function () { if (wIdx < WALK.length - 1) { wIdx++; renderWalk(); } });
+  renderWalk();
+
+  /* Server Manager */
+  var ROLES = {
+    ad: ["Directory service", "Active Directory", "Keeps every user, computer and group in an office in one place, so people sign in on any PC with one account.", ["Create user accounts and groups", "Join client PCs to the domain", "Reset passwords and unlock accounts"]],
+    dns: ["Name service", "DNS", "Turns names into IP addresses, so computers find the server and each other by name instead of by number.", ["Create lookup zones", "Add host records for servers and PCs", "Check that names resolve from a client"]],
+    dhcp: ["Address service", "DHCP and failover", "Hands out IP addresses and network settings to client PCs automatically. With two servers, failover lets both share one scope so clients still get addresses if one goes down.", ["Create a scope with the office address range", "Set the gateway and DNS for clients", "Reserve fixed addresses for printers and servers", "Configure failover between the two servers"]],
+    adc: ["Redundancy", "Second domain controller", "A second server holds a copy of the directory. Sign-in keeps working if the first server is offline, and changes replicate between the two.", ["Join the second server to the domain", "Promote it as an additional domain controller", "Check replication between both servers", "Point each server at the other for DNS"]],
+    web: ["Web service", "IIS web server", "Hosts websites and web apps on the server, with bindings, application pools and certificates.", ["Install the Web Server role", "Create a site and bind it to a port or name", "Secure it with an HTTPS certificate"]],
+    gpo: ["Policy service", "Group Policy", "Applies settings and restrictions to many users and PCs at once, instead of changing each machine.", ["Set password and lock-screen rules", "Control which settings users can change", "Push the same configuration to every client"]],
+    files: ["Storage service", "File services", "Shares folders from the server and controls who can read or change what, by user or by group.", ["Create shared folders", "Set share and folder permissions", "Give each team access to its own folder"]]
+  };
+  var smItems = $$(".sm-item");
+  smItems.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var d = ROLES[b.getAttribute("data-k")];
+      if (!d) return;
+      smItems.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      $("#sm-tag").textContent = d[0];
+      $("#sm-title").textContent = d[1];
+      $("#sm-what").textContent = d[2];
+      var ul = $("#sm-tasks");
+      ul.innerHTML = "";
+      var smPane = $(".sm-pane");
+      smPane.classList.remove("pop");
+      void smPane.offsetWidth;
+      smPane.classList.add("pop");
+      d[3].forEach(function (t) { var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+    });
+  });
+
+  /* Copy buttons */
+  function flash(btn, text) {
+    var old = btn.getAttribute("data-label") || btn.textContent;
+    btn.setAttribute("data-label", old);
+    btn.textContent = text;
+    setTimeout(function () { btn.textContent = old; }, 1600);
+  }
+  function selectText(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+  $$("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var target = btn.getAttribute("data-target");
+      var done = function () { flash(btn, "Copied"); };
+      var fallback = function () { selectText(target); flash(btn, "Selected"); };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (err) { fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
