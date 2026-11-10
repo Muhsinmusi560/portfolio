@@ -1,1585 +1,291 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Muhsin Muhammad A T · Software Engineer & Network Systems Specialist</title>
-<meta name="description" content="Muhsin Muhammad A T — Computer Science Engineer, Cisco CCNA Certified Network & Server Administrator, Windows Server 2025 specialist. Building software engineering projects and enterprise network infrastructure.">
-<meta name="keywords" content="Muhsin Muhammad, Software Engineer, Network Administrator, CCNA, Windows Server 2025, Active Directory, Cisco, Python, Flask, Kannur, Kerala">
-<meta name="author" content="Muhsin Muhammad A T">
-<meta name="theme-color" content="#030712">
-
-<!-- OpenGraph / Social Meta for Instagram, LinkedIn & WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Muhsin Muhammad A T · Software & Network Systems Engineer">
-<meta property="og:description" content="Computer Science Engineer & Cisco CCNA Certified Network Administrator. Exploring enterprise infrastructure & software architecture.">
-<meta property="og:url" content="https://muhsinmusi560.github.io/portfolioo/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Muhsin Muhammad A T · Software & Network Systems Engineer">
-<meta name="twitter:description" content="Computer Science Engineer & Cisco CCNA Certified Network Administrator. Exploring enterprise infrastructure & software architecture.">
-
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23030712'/><circle cx='16' cy='9' r='4' fill='%2306B6D4'/><circle cx='8' cy='23' r='4' fill='%236366F1'/><circle cx='24' cy='23' r='4' fill='%2310B981'/><path d='M16 13 L8 19 M16 13 L24 19' stroke='%2338BDF8' stroke-width='2' stroke-linecap='round'/></svg>">
-
-<!-- Modern Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-
+<title>Muhsin Muhammad A T – Software Engineer & Network Systems Specialist</title>
+<meta name="theme-color" content="#F5F6FB"><meta property="og:type" content="website"><meta property="og:title" content="Muhsin Muhammad A T – Software & Network Systems Engineer"><meta property="og:description" content="CS Engineer, Cisco CCNA certified, Windows Server 2025 specialist from Kannur, Kerala."><meta name="twitter:card" content="summary_large_image"><meta name="description" content="Computer Science Engineer, Cisco CCNA certified, Windows Server 2025 specialist from Kannur, Kerala.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c111c'/><circle cx='16' cy='9' r='4' fill='%23ffbe55'/><circle cx='8' cy='23' r='4' fill='%238b9bff'/><circle cx='24' cy='23' r='4' fill='%235eeab0'/></svg>">
+<script>document.documentElement.dataset.theme='light'</script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* ==========================================================================
-   Obsidian & Neon Color System (Flagship Modern Developer Aesthetic)
-   ========================================================================== */
-:root {
-  --bg: #030712;
-  --bg-subtle: #080D1A;
-  --surface: #0D1424;
-  --surface-card: #111B30;
-  --surface-card-hover: #162440;
-  --surface-glass: rgba(13, 20, 36, 0.78);
-  
-  --border: rgba(255, 255, 255, 0.08);
-  --border-subtle: rgba(255, 255, 255, 0.04);
-  --border-glow: rgba(6, 182, 212, 0.35);
-  
-  --text-main: #F9FAFB;
-  --text-muted: #94A3B8;
-  --text-dim: #64748B;
-  
-  --cyan: #06B6D4;
-  --cyan-bright: #22D3EE;
-  --cyan-glow: rgba(6, 182, 212, 0.25);
-  --indigo: #6366F1;
-  --indigo-glow: rgba(99, 102, 241, 0.25);
-  --emerald: #10B981;
-  --amber: #F59E0B;
-  --rose: #F43F5E;
-  
-  --gradient-brand: linear-gradient(135deg, #06B6D4 0%, #6366F1 50%, #EC4899 100%);
-  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
-  --gradient-cyan: linear-gradient(135deg, #22D3EE 0%, #06B6D4 60%, #0284C7 100%);
-  --glow-mesh: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.14), transparent 50%), radial-gradient(circle at 100% 30%, rgba(99, 102, 241, 0.1), transparent 45%);
-  
-  --term-bg: #030712;
-  --term-fg: #F1F5F9;
-  --term-line: #1E293B;
-  
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'Space Grotesk', var(--font-sans);
-  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
-  
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
-  
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 25px rgba(6, 182, 212, 0.2);
-  --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  color-scheme: dark;
-}
-
-:root[data-theme="light"] {
-  --bg: #F8FAFC;
-  --bg-subtle: #F1F5F9;
-  --surface: #FFFFFF;
-  --surface-card: #FFFFFF;
-  --surface-card-hover: #F8FAFC;
-  --surface-glass: rgba(255, 255, 255, 0.88);
-  
-  --border: #E2E8F0;
-  --border-subtle: #EDF2F7;
-  --border-glow: rgba(2, 132, 199, 0.4);
-  
-  --text-main: #0F172A;
-  --text-muted: #475569;
-  --text-dim: #94A3B8;
-  
-  --cyan: #0284C7;
-  --cyan-bright: #0369A1;
-  --cyan-glow: rgba(2, 132, 199, 0.15);
-  --indigo: #4F46E5;
-  --indigo-glow: rgba(79, 70, 229, 0.15);
-  --emerald: #059669;
-  --amber: #D97706;
-  --rose: #E11D48;
-  
-  --gradient-brand: linear-gradient(135deg, #0284C7 0%, #4F46E5 50%, #DB2777 100%);
-  --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-  --gradient-cyan: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
-  --glow-mesh: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.08), transparent 50%);
-  
-  --term-bg: #0F172A;
-  --term-fg: #F1F5F9;
-  --term-line: #334155;
-  --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-  color-scheme: light;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
-body {
-  background-color: var(--bg);
-  background-image: var(--glow-mesh);
-  background-attachment: fixed;
-  color: var(--text-main);
-  font-family: var(--font-sans);
-  line-height: 1.55;
-  overflow-x: hidden;
-  min-height: 100vh;
-  padding-bottom: 70px;
-}
-
-#mesh {
-  position: fixed; inset: 0; width: 100%; height: 100%;
-  z-index: 0; pointer-events: none; opacity: 0.4;
-}
-
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(--text-main); line-height: 1.15; }
-a { color: var(--cyan); text-decoration: none; transition: color var(--transition); }
-a:hover { color: var(--cyan-bright); }
-button { font-family: inherit; cursor: pointer; border: none; background: none; }
-code, pre { font-family: var(--font-mono); }
-
-.glow-text {
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-left: max(18px, env(safe-area-inset-left));
-  padding-right: max(18px, env(safe-area-inset-right));
-  position: relative;
-  z-index: 1;
-}
-
-/* Scroll progress */
-.scroll-progress {
-  position: fixed; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--gradient-brand); transform: scaleX(0); transform-origin: left;
-  z-index: 100; pointer-events: none;
-}
-
-/* Glass Navbar */
-.navbar {
-  position: sticky; top: 0; z-index: 80;
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  background: var(--surface-glass);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 0;
-}
-.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-.brand-link {
-  display: flex; align-items: center; gap: 10px;
-  font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700; color: var(--text-main);
-}
-.brand-icon {
-  width: 28px; height: 28px; border-radius: var(--radius-sm);
-  background: var(--gradient-brand); display: flex; align-items: center; justify-content: center;
-  color: #030712; font-weight: 800; font-size: 0.82rem; flex: none;
-}
-.live-badge {
-  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
-  border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.35); color: var(--emerald);
-  font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600;
-}
-.live-dot {
-  width: 8px; height: 8px; border-radius: 50%; background: var(--emerald);
-  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); animation: radar-ping 2s infinite; flex: none;
-}
-@keyframes radar-ping {
-  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
-
-.nav-actions { display: flex; align-items: center; gap: 8px; }
-.kannur-clock {
-  display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px;
-  border-radius: var(--radius-full); background: var(--surface); border: 1px solid var(--border);
-  color: var(--cyan); font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600;
-}
-@media (max-width: 640px) { .kannur-clock { display: none; } }
-
-.theme-btn {
-  display: flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: var(--radius-md);
-  background: var(--surface); border: 1px solid var(--border);
-  color: var(--text-main); transition: all var(--transition);
-}
-.theme-btn:hover { border-color: var(--cyan); transform: translateY(-1px); }
-
-.btn-nav-wa {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 0 14px; min-height: 36px; border-radius: var(--radius-md);
-  background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.4);
-  color: #25D366; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
-  transition: all var(--transition);
-}
-.btn-nav-wa:hover { background: #25D366; color: #030712; transform: translateY(-1px); }
-
-/* Sticky Pills Dock */
-.nav-dock-wrap {
-  position: sticky; top: 62px; z-index: 75; margin: 10px 0 24px;
-}
-.nav-dock {
-  display: flex; align-items: center; gap: 6px; padding: 6px;
-  border-radius: var(--radius-full); background: var(--surface-glass);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border); overflow-x: auto;
-  scrollbar-width: none; box-shadow: var(--shadow-card);
-}
-.nav-dock::-webkit-scrollbar { display: none; }
-.dock-link {
-  display: inline-flex; align-items: center; padding: 6px 14px;
-  border-radius: var(--radius-full); font-family: var(--font-mono);
-  font-size: 0.76rem; font-weight: 500; color: var(--text-muted);
-  white-space: nowrap; transition: all var(--transition);
-}
-.dock-link:hover, .dock-link.active {
-  background: var(--cyan); color: #030712; font-weight: 700;
-}
-
-/* Hero Section */
-.hero {
-  padding: 20px 0 40px;
-  display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center;
-}
-@media (min-width: 920px) {
-  .hero { grid-template-columns: 1.1fr 1fr; gap: 36px; padding: 32px 0 52px; }
-}
-
-.hero-content { display: flex; flex-direction: column; gap: 16px; }
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 4px 12px; border-radius: var(--radius-full);
-  background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3);
-  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
-  color: var(--cyan); letter-spacing: 0.04em; text-transform: uppercase; width: fit-content;
-}
-
-.hero h1 {
-  font-size: clamp(2.3rem, 5.5vw, 3.6rem);
-  font-weight: 800; letter-spacing: -0.025em; line-height: 1.08;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.05rem, 2.3vw, 1.25rem);
-  font-weight: 600; color: var(--text-main); line-height: 1.35;
-}
-
-.terminal-typer-line {
-  display: flex; align-items: center; gap: 8px; padding: 8px 14px;
-  background: var(--term-bg); border: 1px solid var(--term-line);
-  border-radius: var(--radius-md); font-family: var(--font-mono);
-  font-size: 0.82rem; color: var(--text-muted); box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
-}
-.terminal-typer-line .prompt { color: var(--cyan); font-weight: 700; flex: none; }
-.terminal-typer-line .cursor {
-  display: inline-block; width: 7px; height: 14px; background: var(--cyan);
-  animation: blink 1s step-end infinite;
-}
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-.hero-pitch {
-  font-size: 0.98rem; color: var(--text-muted); line-height: 1.6; max-width: 52ch;
-}
-.hero-pitch strong { color: var(--text-main); }
-
-.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
-.badge-pill {
-  display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px;
-  border-radius: var(--radius-sm); background: var(--surface-card);
-  border: 1px solid var(--border); font-family: var(--font-mono);
-  font-size: 0.76rem; font-weight: 500; color: var(--text-main);
-}
-.badge-pill.verified::before { content: "✓"; color: var(--emerald); font-weight: 700; }
-
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
-.btn-primary {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 46px; padding: 0 20px; border-radius: var(--radius-md);
-  background: var(--gradient-cyan); color: #030712;
-  font-family: var(--font-mono); font-size: 0.86rem; font-weight: 700;
-  box-shadow: 0 4px 18px var(--cyan-glow); transition: all var(--transition);
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 22px var(--cyan-glow); color: #030712; }
-
-.btn-secondary {
-  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
-  min-height: 46px; padding: 0 18px; border-radius: var(--radius-md);
-  background: var(--surface-card); border: 1px solid var(--border);
-  color: var(--text-main); font-family: var(--font-mono);
-  font-size: 0.84rem; font-weight: 600; transition: all var(--transition);
-}
-.btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
-
-/* Live Network Topology Interactive Canvas */
-.topo-card {
-  background: var(--surface-glass); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 18px; box-shadow: var(--shadow-card);
-  display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden;
-}
-.topo-card::before {
-  content: ""; position: absolute; top: -60px; right: -60px; width: 180px; height: 180px;
-  border-radius: 50%; background: radial-gradient(circle, var(--cyan-glow), transparent 70%);
-  pointer-events: none;
-}
-.topo-header {
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px;
-}
-.topo-title {
-  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
-  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;
-}
-.btn-ping-sim {
-  padding: 4px 11px; background: rgba(6, 182, 212, 0.14);
-  border: 1px solid rgba(6, 182, 212, 0.4); border-radius: var(--radius-sm);
-  color: var(--cyan-bright); font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600;
-  transition: all var(--transition);
-}
-.btn-ping-sim:hover { background: var(--cyan); color: #030712; }
-
-.topo-svg-wrap { width: 100%; }
-.topo-svg-wrap svg { width: 100%; height: auto; display: block; }
-
-.link-line {
-  stroke: var(--text-dim); stroke-width: 1.6; stroke-dasharray: 4 4;
-  animation: flowLine 1.4s linear infinite;
-}
-@keyframes flowLine { to { stroke-dashoffset: -8; } }
-
-.ifc-label { fill: var(--text-dim); font-family: var(--font-mono); font-size: 8px; font-weight: 500; }
-.node-group { cursor: pointer; outline: none; }
-.node-group rect {
-  fill: var(--surface-card); stroke: var(--border); stroke-width: 1.5;
-  transition: all var(--transition);
-}
-.node-group text {
-  fill: var(--text-main); font-family: var(--font-mono); font-size: 10.5px;
-  font-weight: 600; text-anchor: middle; dominant-baseline: central; pointer-events: none;
-}
-.node-group:hover rect, .node-group.active rect {
-  stroke: var(--cyan); fill: var(--surface-card-hover);
-  filter: drop-shadow(0 0 8px var(--cyan-glow));
-}
-.ping-packet { fill: var(--cyan); filter: drop-shadow(0 0 6px var(--cyan)); }
-
-.topo-inspector {
-  background: var(--term-bg); border: 1px solid var(--term-line);
-  border-radius: var(--radius-md); padding: 10px 14px;
-  display: flex; flex-direction: column; gap: 4px; font-family: var(--font-mono);
-}
-.ti-head {
-  display: flex; align-items: center; justify-content: space-between;
-  font-size: 0.78rem; color: var(--cyan-bright); font-weight: 600;
-}
-.ti-cli-preview {
-  padding: 6px 10px; background: rgba(0, 0, 0, 0.4);
-  border-left: 2px solid var(--cyan); border-radius: 3px;
-  font-size: 0.72rem; color: var(--emerald); white-space: pre-wrap; line-height: 1.4;
-}
-
-/* Key Metrics Bento Bar */
-.metrics-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0 36px;
-}
-@media (min-width: 768px) { .metrics-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
-.metric-box {
-  background: var(--surface-glass); border: 1px solid var(--border);
-  border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 3px;
-  position: relative; overflow: hidden; transition: all var(--transition);
-}
-.metric-box:hover { border-color: var(--border-glow); transform: translateY(-2px); }
-.metric-num {
-  font-family: var(--font-display); font-size: 1.85rem; font-weight: 800;
-  background: var(--gradient-brand); -webkit-background-clip: text;
-  background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1;
-}
-.metric-label { font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-muted); }
-
-/* Section Scaffolding */
-.section { padding: 36px 0 20px; }
-.section-header { display: flex; flex-direction: column; gap: 5px; margin-bottom: 20px; }
-.section-eyebrow {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600;
-  color: var(--cyan); letter-spacing: 0.05em; text-transform: uppercase;
-}
-.section-eyebrow::before { content: "#"; color: var(--text-dim); }
-.section-title { font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; }
-.section-desc { font-size: 0.94rem; color: var(--text-muted); max-width: 60ch; }
-
-/* Bento Pillars Architecture */
-.bento-pillars {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
-}
-@media (min-width: 768px) { .bento-pillars { grid-template-columns: repeat(3, 1fr); } }
-.pillar-card {
-  background: var(--surface-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column;
-  gap: 12px; transition: all var(--transition); position: relative; overflow: hidden;
-}
-.pillar-card:hover { border-color: var(--border-glow); transform: translateY(-3px); box-shadow: var(--shadow-glow); }
-.pillar-badge {
-  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
-  color: var(--cyan); text-transform: uppercase; letter-spacing: 0.05em;
-}
-.pillar-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-main); }
-.pillar-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-muted); }
-.pillar-card li { position: relative; padding-left: 16px; }
-.pillar-card li::before { content: "›"; position: absolute; left: 2px; color: var(--cyan); font-weight: 700; font-size: 1.1rem; line-height: 1; }
-
-/* Interactive Terminal 2.0 */
-.terminal-window {
-  background: var(--term-bg); border: 1px solid var(--term-line);
-  border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);
-}
-.terminal-bar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 16px; background: rgba(11, 18, 32, 0.95); border-bottom: 1px solid var(--term-line);
-}
-.terminal-dots { display: flex; gap: 7px; }
-.tdot { width: 11px; height: 11px; border-radius: 50%; }
-.tdot.red { background: #FF5F56; } .tdot.yellow { background: #FFBD2E; } .tdot.green { background: #27C93F; }
-.terminal-title { font-family: var(--font-mono); font-size: 0.74rem; color: var(--term-dim); }
-.terminal-out {
-  min-height: 180px; max-height: 280px; overflow-y: auto; padding: 16px;
-  font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.55; color: var(--term-fg);
-  display: flex; flex-direction: column; gap: 4px;
-}
-.terminal-form {
-  display: flex; align-items: center; gap: 8px; padding: 10px 16px;
-  background: rgba(11, 18, 32, 0.6); border-top: 1px solid var(--term-line);
-}
-.term-prompt { color: var(--cyan-bright); font-family: var(--font-mono); font-weight: 700; font-size: 0.88rem; }
-.terminal-input {
-  flex: 1; background: transparent; border: none; outline: none;
-  color: var(--term-fg); font-family: var(--font-mono); font-size: 0.88rem;
-}
-.terminal-chips {
-  display: flex; flex-wrap: wrap; gap: 7px; padding: 0 16px 12px;
-  background: rgba(11, 18, 32, 0.6);
-}
-.tchip-btn {
-  padding: 5px 11px; background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--term-line); border-radius: var(--radius-sm);
-  color: var(--text-muted); font-family: var(--font-mono); font-size: 0.74rem;
-  transition: all var(--transition);
-}
-.tchip-btn:hover { border-color: var(--cyan); color: var(--cyan-bright); background: rgba(6, 182, 212, 0.1); }
-
-/* Skills Switch Panel */
-.skills-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.tab-btn {
-  padding: 7px 16px; border-radius: var(--radius-md); background: var(--surface-card);
-  border: 1px solid var(--border); color: var(--text-muted); font-family: var(--font-mono);
-  font-size: 0.78rem; font-weight: 600; transition: all var(--transition);
-}
-.tab-btn:hover { border-color: var(--cyan); color: var(--text-main); }
-.tab-btn.active { background: var(--cyan); color: #030712; font-weight: 700; border-color: var(--cyan); }
-
-.table-wrap {
-  background: var(--surface-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); overflow-x: auto; box-shadow: var(--shadow-card);
-}
-.skills-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
-.skills-table th {
-  padding: 11px 16px; border-bottom: 1px solid var(--border);
-  font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase;
-  color: var(--text-dim); background: rgba(0, 0, 0, 0.2);
-}
-.skills-table td { padding: 11px 16px; border-bottom: 1px solid var(--border-subtle); vertical-align: middle; }
-.skills-table tr:last-child td { border-bottom: none; }
-.port-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyan-bright); font-weight: 600; }
-.dot-indicator { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); margin-right: 6px; }
-
-/* Windows Server 2025 Dashboard */
-.server-manager-wrap {
-  background: var(--surface-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); overflow: hidden; display: grid; grid-template-columns: 1fr;
-  box-shadow: var(--shadow-card);
-}
-@media (min-width: 800px) { .server-manager-wrap { grid-template-columns: 250px 1fr; } }
-.sm-nav-pane {
-  background: rgba(0, 0, 0, 0.2); border-bottom: 1px solid var(--border);
-  padding: 14px; display: flex; flex-direction: column; gap: 6px;
-}
-@media (min-width: 800px) { .sm-nav-pane { border-bottom: none; border-right: 1px solid var(--border); } }
-.sm-role-btn {
-  display: flex; align-items: center; gap: 10px; padding: 9px 12px;
-  border-radius: var(--radius-sm); background: transparent; color: var(--text-muted);
-  font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; text-align: left;
-  transition: all var(--transition);
-}
-.sm-role-btn:hover { background: var(--surface-card-hover); color: var(--text-main); }
-.sm-role-btn.active { background: rgba(6, 182, 212, 0.12); color: var(--cyan-bright); font-weight: 700; border-left: 3px solid var(--cyan); }
-.sm-role-btn::before { content: "●"; color: var(--emerald); font-size: 0.7rem; }
-
-.sm-detail-pane { padding: 22px; display: flex; flex-direction: column; gap: 10px; }
-.sm-tag { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--cyan); letter-spacing: 0.05em; }
-.sm-title { font-size: 1.35rem; font-weight: 700; }
-.sm-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
-.sm-tasks-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
-.sm-tasks-list li { position: relative; padding-left: 18px; font-size: 0.88rem; color: var(--text-main); }
-.sm-tasks-list li::before { content: "›"; position: absolute; left: 2px; color: var(--cyan); font-weight: 700; font-size: 1.1rem; line-height: 1; }
-
-/* Engineered Projects Showcase */
-.projects-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
-@media (min-width: 700px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
-.project-card {
-  background: var(--surface-glass); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column;
-  gap: 12px; box-shadow: var(--shadow-card); transition: all var(--transition); position: relative;
-}
-.project-card:hover { border-color: var(--border-glow); transform: translateY(-3px); box-shadow: var(--shadow-glow); }
-.proj-tag-badge {
-  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: var(--cyan);
-  text-transform: uppercase; letter-spacing: 0.05em;
-}
-.proj-title { font-size: 1.25rem; font-weight: 700; }
-.proj-summary { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; flex-grow: 1; }
-.proj-tech-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.tech-chip {
-  padding: 3px 9px; background: var(--bg); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);
-}
-.proj-actions {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 12px; border-top: 1px solid var(--border-subtle);
-}
-.proj-detail-toggle {
-  font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--cyan);
-}
-.proj-detail-toggle::after { content: " +"; }
-.proj-detail-toggle.open::after { content: " −"; }
-.proj-expandable {
-  font-size: 0.84rem; color: var(--text-muted); line-height: 1.55;
-  padding: 10px 0 2px; border-top: 1px dashed var(--border-subtle);
-}
-
-/* Timeline */
-.timeline {
-  display: flex; flex-direction: column; gap: 20px; position: relative; padding-left: 24px;
-}
-.timeline::before {
-  content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border);
-}
-.tl-item { position: relative; display: flex; flex-direction: column; gap: 4px; }
-.tl-item::before {
-  content: ""; position: absolute; left: -24px; top: 6px; width: 10px; height: 10px;
-  border-radius: 50%; background: var(--bg); border: 2px solid var(--cyan);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
-}
-.tl-title { font-size: 1.1rem; font-weight: 700; }
-.tl-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
-.tl-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 0.86rem; color: var(--text-muted); }
-.tl-bullets li { position: relative; padding-left: 16px; }
-.tl-bullets li::before { content: "›"; position: absolute; left: 2px; color: var(--cyan); font-weight: 700; }
-
-/* Contact Section (Instagram / Mobile Ready) */
-.contact-container {
-  background: var(--surface-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 28px 24px; box-shadow: var(--shadow-card);
-  position: relative; overflow: hidden;
-}
-.contact-container::before {
-  content: ""; position: absolute; bottom: -80px; right: -80px; width: 240px; height: 240px;
-  border-radius: 50%; background: radial-gradient(circle, var(--cyan-glow), transparent 70%);
-  pointer-events: none;
-}
-.contact-cards-grid {
-  display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px;
-}
-@media (min-width: 600px) { .contact-cards-grid { grid-template-columns: repeat(2, 1fr); } }
-.contact-row-card {
-  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md);
-  padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  transition: all var(--transition);
-}
-.contact-row-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
-.crc-label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; color: var(--cyan); }
-.crc-val { font-family: var(--font-mono); font-size: 0.88rem; font-weight: 600; color: var(--text-main); }
-.btn-copy-tactile {
-  min-height: 34px; padding: 0 12px; border-radius: var(--radius-sm);
-  background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.35);
-  color: var(--cyan-bright); font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;
-  transition: all var(--transition);
-}
-.btn-copy-tactile:hover { background: var(--cyan); color: #030712; }
-
-.mobile-profile-actions {
-  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border-subtle);
-}
-.btn-vcard {
-  display: inline-flex; align-items: center; gap: 8px; padding: 0 18px; min-height: 44px;
-  border-radius: var(--radius-md); background: var(--gradient-cyan); color: #030712;
-  font-family: var(--font-mono); font-size: 0.84rem; font-weight: 700;
-  box-shadow: 0 4px 14px var(--cyan-glow); transition: all var(--transition);
-}
-.btn-vcard:hover { transform: translateY(-2px); }
-.btn-share {
-  display: inline-flex; align-items: center; gap: 8px; padding: 0 18px; min-height: 44px;
-  border-radius: var(--radius-md); background: var(--bg); border: 1px solid var(--border);
-  color: var(--text-main); font-family: var(--font-mono); font-size: 0.84rem; font-weight: 600;
-  transition: all var(--transition);
-}
-.btn-share:hover { border-color: var(--cyan); color: var(--cyan-bright); }
-
-/* Toast */
-.toast-msg {
-  position: fixed; bottom: 24px; right: 24px; z-index: 120;
-  background: var(--surface-card); border: 1px solid var(--cyan);
-  border-radius: var(--radius-md); padding: 12px 18px; font-family: var(--font-mono);
-  font-size: 0.8rem; color: var(--text-main); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-  transform: translateY(60px); opacity: 0; transition: all 0.25s ease-out; pointer-events: none;
-}
-.toast-msg.show { transform: translateY(0); opacity: 1; }
-
-footer {
-  margin-top: 50px; padding: 22px 0; border-top: 1px solid var(--border);
-  text-align: center; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim);
-}
+:root{--bg:#F5F6FB;--panel:#FFFFFF;--line:#E1E4F0;--text:#101A3A;--mut:#55607E;--amber:#A8700A;--mint:#0F8F6B;--iris:#4352D9;--ink:#fff;--gold:linear-gradient(135deg,#F6CB63,#D99A2B);--f:'Bricolage Grotesque',system-ui,sans-serif;--m:'JetBrains Mono',ui-monospace,monospace;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#070b14;--panel:#101728;--line:#222c45;--text:#eef1f8;--mut:#aab5cf;--amber:#ffbe55;--mint:#5eeab0;--iris:#9aa8ff;--ink:#070b14;color-scheme:dark}
+.dk{--bg:#0B1226;--panel:#131C3A;--line:#26325c;--text:#EEF1FA;--mut:#A9B5D6;--amber:#FFC45C;--mint:#5EEAB0;--iris:#9AA8FF;color:var(--text)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--text);font:400 1.05rem/1.6 var(--f);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.45;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent)}
+@media(hover:none){.glow{display:none}}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;left:0;top:0;background:radial-gradient(circle,color-mix(in srgb,var(--iris) 22%,transparent),transparent 65%);transform:translate(-50%,-50%);transition:opacity .3s}
+.bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--amber),var(--mint),var(--iris));transform:scaleX(0);transform-origin:0;z-index:70}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{font:600 .95rem var(--m)}.logo b{color:var(--amber)}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.links a{padding:8px 14px;border-radius:99px;font-size:.92rem;font-weight:500;color:var(--mut);white-space:nowrap;transition:.2s}
+.links a:hover{color:var(--text)}.links a.on{background:var(--text);color:var(--bg)}
+.tog{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);flex:none}
+section{padding:96px 0 40px;position:relative;z-index:1}
+h2{font:800 clamp(2rem,4.5vw,3.2rem)/1.05 var(--f);letter-spacing:-.03em;margin-bottom:12px}
+.sub{color:var(--mut);max-width:58ch;margin-bottom:38px}
+.hero{padding-top:64px;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;min-height:calc(100vh - 62px)}
+.badge{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:7px 14px;border-radius:99px;font-size:.88rem;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 var(--mint);animation:pl 2s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 9px transparent}}
+h1{font:800 clamp(2.8rem,7.4vw,5.6rem)/.96 var(--f);letter-spacing:-.045em;margin:22px 0 18px}
+h1 span{display:block;background:linear-gradient(100deg,var(--iris) 10%,#C98A1B 75%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.role{font:600 1.15rem var(--m);color:var(--amber);min-height:1.8em}
+.role::after{content:"▍";animation:bl 1s steps(1) infinite;margin-left:2px}
+@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mut);max-width:50ch;margin:14px 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:13px 22px;border-radius:14px;font-weight:600;border:1px solid var(--line);background:var(--panel);transition:.2s}
+.btn:hover{transform:translateY(-3px);border-color:var(--amber)}
+.btn.main{background:var(--gold);color:#241700;border-color:transparent;box-shadow:0 12px 28px -10px #D99A2B}
+.btn.main:hover{border-color:transparent;box-shadow:0 16px 34px -8px #D99A2B}
+.topo{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 30px 60px -30px #0008}
+.topo header{display:flex;justify-content:space-between;align-items:center;font:600 .8rem var(--m);color:var(--mut);margin-bottom:6px}
+.topo svg{width:100%;height:auto;display:block}
+.nd{cursor:pointer}.nd rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5;transition:.25s}
+.nd:hover rect,.nd.hot rect{stroke:var(--amber);fill:color-mix(in srgb,var(--amber) 12%,var(--bg))}
+.nd text{fill:var(--text);font:600 11px var(--m);text-anchor:middle;pointer-events:none}
+.ln{stroke:var(--line);stroke-width:2;fill:none;stroke-dasharray:5 6;animation:fl 3s linear infinite}
+@keyframes fl{to{stroke-dashoffset:-44}}
+.cap{font:.82rem var(--m);color:var(--mint);min-height:2.6em;margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+.stat{border-top:2px solid var(--line);padding-top:14px}.stat b{font:800 2.2rem var(--f);display:block;letter-spacing:-.03em}.stat span{color:var(--mut);font-size:.9rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;overflow:hidden;transition:transform .3s,border-color .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--c,var(--amber)) 20%,transparent),transparent 70%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-5px);border-color:var(--c,var(--amber))}.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card{box-shadow:0 1px 2px #1019400d,0 14px 30px -20px #10194055}
+.dk .card{box-shadow:none}
+.topo{box-shadow:0 30px 60px -28px #0B1226aa!important}
+#contact{margin:70px 16px 0;border-radius:32px;padding:84px 0 60px;background:radial-gradient(600px 300px at 90% 0,#4352D933,transparent),var(--bg);color:var(--text)}
+.hero::before{content:"";position:absolute;inset:-40px -10vw auto auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#F6CB6355,transparent 65%);z-index:-1}
+.hero{position:relative}
+.card h3{font:700 1.3rem var(--f);margin-bottom:12px}
+.card li{list-style:none;color:var(--mut);font-size:.95rem;padding:6px 0 6px 20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.95em;width:8px;height:2px;background:var(--c,var(--amber))}
+.term{background:#070a12;border:1px solid var(--line);border-radius:18px;overflow:hidden;font:400 .9rem/1.6 var(--m);color:#dfe5f3}
+.tb{display:flex;gap:7px;padding:12px 16px;background:#101727;align-items:center;font-size:.78rem;color:#8a96b3}
+.tb i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.tb i:nth-child(2){background:#febc2e}.tb i:nth-child(3){background:#28c840}.tb span{margin-left:10px}
+#out{height:300px;overflow:auto;padding:16px;white-space:pre-wrap}
+#out .c{color:#ffbe55}#out .g{color:#5eeab0}#out .d{color:#8a96b3}
+.tin{display:flex;gap:8px;padding:0 16px 14px;align-items:center}.tin span{color:#ffbe55}
+.tin input{flex:1;background:none;border:0;color:inherit;font:inherit;outline:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{padding:8px 15px;border-radius:99px;border:1px solid var(--line);color:var(--mut);font-size:.9rem;transition:.2s}
+.chip:hover,.chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.sk div{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.sk p{display:flex;justify-content:space-between;font-weight:600;margin-bottom:4px}.sk small{color:var(--mut);display:block;margin-bottom:10px}
+.sk em{font:normal .75rem var(--m);color:var(--mint)}
+.meter{height:5px;background:var(--line);border-radius:9px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--iris),var(--mint));border-radius:9px;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.roles{display:grid;grid-template-columns:260px 1fr;gap:20px}
+.rl{display:flex;flex-direction:column;gap:8px}.rl button{text-align:left;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:.2s}
+.rl button:hover{transform:translateX(5px)}.rl button.on{border-color:var(--iris);background:color-mix(in srgb,var(--iris) 14%,var(--panel))}
+.rp{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px}
+.rp small{font:600 .8rem var(--m);color:var(--iris)}.rp h3{font:800 1.8rem var(--f);margin:6px 0}.rp p{color:var(--mut);margin-bottom:12px}
+.pj{display:flex;flex-direction:column;gap:14px}.pj h3{font-size:1.25rem}.pj p{color:var(--mut);font-size:.95rem}.pj .k{font:600 .75rem var(--m);color:var(--c)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}.tags span{font:.75rem var(--m);padding:4px 10px;border-radius:8px;background:var(--bg);border:1px solid var(--line);color:var(--mut)}
+.more{display:none;border-top:1px dashed var(--line);padding-top:12px;font-size:.9rem;color:var(--text)}.pj.open .more{display:block}
+.tl{border-left:2px solid var(--line);margin-left:8px;display:grid;gap:28px}
+.tl article{position:relative;padding-left:30px}.tl article::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--amber)}
+.tl small{font:.8rem var(--m);color:var(--mut)}.tl h3{font:700 1.3rem var(--f)}.tl li{list-style:none;color:var(--mut);margin-top:6px}
+.cta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cta .card{display:flex;flex-direction:column;gap:4px}.cta small{color:var(--mut)}.cta b{font:600 1.15rem var(--f);word-break:break-all}
+footer{padding:50px 0 40px;color:var(--mut);font-size:.9rem;text-align:center;position:relative;z-index:1}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--text);color:var(--bg);padding:11px 20px;border-radius:99px;opacity:0;transition:.3s;z-index:90;font-weight:600}.toast.show{transform:translate(-50%,0);opacity:1}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.hero,.roles{grid-template-columns:1fr}.grid3,.sk,.cta{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero{min-height:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<div class="bar" id="bar"></div><div class="glow" id="glow"></div>
+<nav><div class="wrap"><a class="logo" href="#top"><b>&gt;</b> muhsin.dev</a>
+<div class="links" id="links"><a href="#about">About</a><a href="#lab">Terminal</a><a href="#skills">Skills</a><a href="#server">Server</a><a href="#work">Projects</a><a href="#path">Journey</a><a href="#contact">Contact</a></div>
+<button class="tog" id="tog" aria-label="Toggle theme">◐</button></div></nav>
 
-<canvas id="mesh" aria-hidden="true"></canvas>
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- Top Sticky Navbar -->
-<header class="navbar">
-  <div class="container nav-inner">
-    <a class="brand-link" href="#hero">
-      <span class="brand-icon">M</span>
-      <span>muhsin.dev</span>
-    </a>
-    
-    <div class="nav-tools">
-      <span class="live-badge">
-        <span class="live-dot"></span>
-        <span>Open to Roles</span>
-      </span>
-      <span class="kannur-clock" id="kannurClock">IST</span>
-      <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
-        <span id="themeIcon">☀️</span>
-      </button>
-      <a class="btn-nav-wa" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">
-        <span>WhatsApp</span>
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- Floating Section Navigation Dock -->
-<div class="container nav-dock-wrap">
-  <nav class="nav-dock" aria-label="Sections">
-    <a class="dock-link active" href="#hero">Overview</a>
-    <a class="dock-link" href="#pillars">Engineering Pillars</a>
-    <a class="dock-link" href="#terminal">Terminal</a>
-    <a class="dock-link" href="#skills">Skills</a>
-    <a class="dock-link" href="#server">Windows Server</a>
-    <a class="dock-link" href="#projects">Projects</a>
-    <a class="dock-link" href="#experience">Journey</a>
-    <a class="dock-link" href="#contact">Contact</a>
-  </nav>
+<main id="top"><div class="wrap">
+<div class="hero">
+<div>
+<span class="badge"><i class="dot"></i>Open to roles · Kannur, Kerala</span>
+<h1>Muhsin Muhammad<span>A T</span></h1>
+<div class="role" id="role"></div>
+<p class="lead">I build software and the networks it runs on. Cisco CCNA certified, Windows Server 2025 specialist, with production apps shipped to real users.</p>
+<div class="btns"><a class="btn main" href="#work">View projects</a><a class="btn" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">Chat on WhatsApp</a><button class="btn" data-vcf>Save contact</button></div>
+</div>
+<div class="topo dk"><header><span>live-topology · kannur.local</span><button class="btn" id="ping" style="padding:6px 14px;font-size:.8rem">Ping WAN</button></header>
+<svg viewBox="0 0 520 300" id="svg" role="img" aria-label="Network topology diagram">
+<path class="ln" id="l1" d="M260 52V92"/><path class="ln" id="l2" d="M260 128L150 170"/><path class="ln" id="l3" d="M260 128L370 170"/><path class="ln" id="l4" d="M150 206L90 250"/><path class="ln" id="l5" d="M150 206L210 250"/><path class="ln" id="l6" d="M370 206L330 250"/><path class="ln" id="l7" d="M370 206L430 250"/>
+<g class="nd" data-i="Internet · 8.8.8.8 reachable via Se0/0/0"><rect x="215" y="14" width="90" height="38" rx="19"/><text x="260" y="38">Internet</text></g>
+<g class="nd" data-i="R1 · Cisco 2911 ISR · Gi0/0 192.168.10.1/24"><rect x="215" y="92" width="90" height="36" rx="10"/><text x="260" y="115">R1</text></g>
+<g class="nd" data-i="SW1 · Catalyst · VLAN 10 · 802.1Q trunk to R1"><rect x="110" y="170" width="80" height="36" rx="10"/><text x="150" y="193">SW1</text></g>
+<g class="nd" data-i="SW2 · Catalyst · VLAN 20 · 802.1Q trunk to R1"><rect x="330" y="170" width="80" height="36" rx="10"/><text x="370" y="193">SW2</text></g>
+<g class="nd" data-i="PC-01 · DHCP lease 192.168.10.51"><rect x="55" y="250" width="70" height="34" rx="9"/><text x="90" y="272">PC-01</text></g>
+<g class="nd" data-i="PC-02 · DHCP lease 192.168.10.52"><rect x="175" y="250" width="70" height="34" rx="9"/><text x="210" y="272">PC-02</text></g>
+<g class="nd" data-i="SRV1 · Windows Server 2025 · AD DS + DNS"><rect x="295" y="250" width="70" height="34" rx="9"/><text x="330" y="272">SRV1</text></g>
+<g class="nd" data-i="SRV2 · Additional DC · DHCP failover partner"><rect x="395" y="250" width="70" height="34" rx="9"/><text x="430" y="272">SRV2</text></g>
+</svg><div class="cap" id="cap">Hover a node, or press Ping WAN to send a packet.</div></div>
+</div>
+<div class="stats rv"><div class="stat"><b>CCNA</b><span>Cisco certified, exam 200-301</span></div><div class="stat"><b>WS 2025</b><span>Windows Server specialist</span></div><div class="stat"><b data-n="6" data-s="+">0</b><span>Shipped apps & POS systems</span></div><div class="stat"><b>B.Tech</b><span>Computer Science, KTU</span></div></div>
 </div>
 
-<main class="container">
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-tag">
-        <span>📍 Kannur, Kerala · CCNA Certified</span>
-      </div>
-      
-      <h1>Muhsin Muhammad <span class="glow-text">A T</span></h1>
-      <p class="hero-subtitle">Software Engineer · Enterprise Network & Systems Specialist</p>
-      
-      <div class="terminal-typer-line">
-        <span class="prompt">Muhsin#</span>
-        <span id="typedPhrase">configuring routers and switches</span>
-        <span class="cursor"></span>
-      </div>
-      
-      <p class="hero-pitch">
-        <strong>Computer Science Engineer</strong> with Cisco CCNA certification and Windows Server 2025 specialization. I bring full-stack software engineering standards into enterprise routing, switching, and systems administration.
-      </p>
-      
-      <div class="hero-badges">
-        <span class="badge-pill verified">Cisco CCNA (200-301)</span>
-        <span class="badge-pill verified">Windows Server 2025</span>
-        <span class="badge-pill">B.Tech Computer Science</span>
-      </div>
-      
-      <div class="hero-actions">
-        <a class="btn-primary" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">
-          <span>💬 Chat on WhatsApp</span>
-        </a>
-        <button class="btn-secondary" id="heroVCardBtn" type="button">
-          <span>💾 Save Contact</span>
-        </button>
-        <a class="btn-secondary" href="#projects">
-          <span>📁 View Projects</span>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Live Topology Canvas with Ping Simulator -->
-    <div class="topo-card">
-      <div class="topo-header">
-        <span class="topo-title">Live Topology Canvas</span>
-        <button class="btn-ping-sim" id="btnSimPing" type="button">⚡ Ping WAN</button>
-      </div>
-      
-      <div class="topo-svg-wrap">
-        <svg viewBox="0 0 380 230" aria-label="Network Diagram">
-          <path id="path-wan-r1" class="link-line" d="M190 36 L190 64" />
-          <path id="path-r1-sw1" class="link-line" d="M190 94 L190 124" />
-          <path id="path-sw1-srv" class="link-line" d="M190 154 L68 190" />
-          <path id="path-sw1-pc1" class="link-line" d="M190 154 L190 190" />
-          <path id="path-sw1-pc2" class="link-line" d="M190 154 L312 190" />
-          
-          <text class="ifc-label" x="196" y="52">Se0/0/0</text>
-          <text class="ifc-label" x="196" y="112">Gi0/1</text>
-          <text class="ifc-label" x="98" y="168">Fa0/1</text>
-          <text class="ifc-label" x="196" y="174">Fa0/2</text>
-          <text class="ifc-label" x="256" y="168">Fa0/3</text>
-          
-          <circle class="ping-packet" r="3.5">
-            <animateMotion dur="1.8s" repeatCount="indefinite" path="M190 36 L190 64" />
-          </circle>
-          <circle class="ping-packet" r="3.5">
-            <animateMotion dur="1.8s" begin="0.4s" repeatCount="indefinite" path="M190 94 L190 124" />
-          </circle>
-          <circle class="ping-packet" r="3.5">
-            <animateMotion dur="2.2s" begin="0.8s" repeatCount="indefinite" path="M190 154 L190 190" />
-          </circle>
-          
-          <g class="node-group" data-node="wan" tabindex="0" role="button">
-            <rect x="150" y="8" width="80" height="28" rx="14" />
-            <text x="190" y="22">WAN Link</text>
-          </g>
-          <g class="node-group active" data-node="r1" tabindex="0" role="button">
-            <rect x="158" y="64" width="64" height="30" rx="6" />
-            <text x="190" y="79">Router R1</text>
-          </g>
-          <g class="node-group" data-node="sw1" tabindex="0" role="button">
-            <rect x="158" y="124" width="64" height="30" rx="6" />
-            <text x="190" y="139">Switch SW1</text>
-          </g>
-          <g class="node-group" data-node="srv" tabindex="0" role="button">
-            <rect x="34" y="190" width="68" height="30" rx="6" />
-            <text x="68" y="205">SRV-2025</text>
-          </g>
-          <g class="node-group" data-node="pc1" tabindex="0" role="button">
-            <rect x="156" y="190" width="68" height="30" rx="6" />
-            <text x="190" y="205">Admin-PC1</text>
-          </g>
-          <g class="node-group" data-node="pc2" tabindex="0" role="button">
-            <rect x="278" y="190" width="68" height="30" rx="6" />
-            <text x="312" y="205">Client-PC2</text>
-          </g>
-        </svg>
-      </div>
-      
-      <div class="topo-inspector" id="topoInspector">
-        <div class="ti-head">
-          <span id="tiTitle">Router R1 · Cisco 2911 ISR</span>
-          <span id="tiSub">192.168.10.1 /24</span>
-        </div>
-        <div class="ti-cli-preview" id="tiCli">R1# show ip interface brief
-Gi0/0    192.168.10.1    YES NVRAM  up  up
-Se0/0/0  203.0.113.2     YES NVRAM  up  up</div>
-      </div>
-    </div>
-  </section>
+<section id="about"><div class="wrap"><h2 class="rv">Three disciplines, one engineer</h2><p class="sub rv">Software, systems and networks are usually separate jobs. I work across all three.</p>
+<div class="grid3 rv">
+<div class="card" style="--c:var(--amber)"><h3>Enterprise networking</h3><ul><li>Cisco routers, Catalyst switches, Packet Tracer</li><li>VLANs, 802.1Q trunking, inter-VLAN routing</li><li>OSPF multi-area, static routes, NAT/PAT</li><li>ROMMON password recovery, ACL security</li></ul></div>
+<div class="card" style="--c:var(--mint)"><h3>Server infrastructure</h3><ul><li>Windows Server 2025 administration</li><li>Active Directory, OUs, Kerberos</li><li>DNS zones, DHCP failover</li><li>Group Policy, NTFS permissions</li></ul></div>
+<div class="card" style="--c:var(--iris)"><h3>Software & automation</h3><ul><li>JavaScript ES6+, HTML5, responsive UI</li><li>Python, Flask REST APIs, PostgreSQL</li><li>OpenCV and facial embeddings</li><li>B.Tech CSE, KTU 2019 scheme</li></ul></div>
+</div></div></section>
 
-  <!-- Key Metrics Bento Bar -->
-  <div class="metrics-grid">
-    <div class="metric-box">
-      <span class="metric-num">CCNA</span>
-      <span class="metric-label">Cisco Certified (200-301)</span>
-    </div>
-    <div class="metric-box">
-      <span class="metric-num">Win '25</span>
-      <span class="metric-label">Windows Server 2025</span>
-    </div>
-    <div class="metric-box">
-      <span class="metric-num">B.Tech</span>
-      <span class="metric-label">Computer Science Engineer</span>
-    </div>
-    <div class="metric-box">
-      <span class="metric-num">6+</span>
-      <span class="metric-label">Shipped Applications & POS</span>
-    </div>
-  </div>
+<section id="lab"><div class="wrap"><h2 class="rv">Talk to the console</h2><p class="sub rv">A small Cisco-style CLI. Type a command, or tap one below.</p>
+<div class="term rv dk"><div class="tb"><i></i><i></i><i></i><span>muhsin@kannur.net: console0</span></div><div id="out" aria-live="polite"></div>
+<form class="tin" id="tf"><span>Muhsin#</span><input id="ti" autocomplete="off" spellcheck="false" aria-label="Terminal command"></form></div>
+<div class="chips" id="tc"><button class="chip" data-c="help">help</button><button class="chip" data-c="show profile">show profile</button><button class="chip" data-c="show skills">show skills</button><button class="chip" data-c="show server">show server</button><button class="chip" data-c="show projects">show projects</button><button class="chip" data-c="ping 8.8.8.8">ping 8.8.8.8</button><button class="chip" data-c="clear">clear</button></div>
+</div></section>
 
-  <!-- Engineering Pillars (Scannable Bento Cards) -->
-  <section class="section" id="pillars">
-    <div class="section-header">
-      <span class="section-eyebrow">core competencies</span>
-      <h2 class="section-title">Engineering Pillars</h2>
-      <p class="section-desc">Combining rigorous computer science engineering principles with enterprise infrastructure administration.</p>
-    </div>
-    
-    <div class="bento-pillars">
-      <div class="pillar-card">
-        <span class="pillar-badge">Infrastructure</span>
-        <h3>Enterprise Networking</h3>
-        <ul>
-          <li>Cisco Routers, Catalyst Switches & Packet Tracer</li>
-          <li>VLANs, 802.1Q Trunking & Inter-VLAN Routing</li>
-          <li>OSPF Multi-Area, Static Routes & NAT/PAT</li>
-          <li>Cisco ROMMON Password Recovery & ACL Security</li>
-        </ul>
-      </div>
+<section id="skills"><div class="wrap"><h2 class="rv">Skills, by interface</h2><p class="sub rv">Filter by domain. Bars show how deep I have worked with each.</p>
+<div class="chips rv" id="sf"><button class="chip on" data-f="all">All</button><button class="chip" data-f="net">Networking</button><button class="chip" data-f="sys">Systems</button><button class="chip" data-f="dev">Software</button></div>
+<div class="sk" id="sg"></div></div></section>
 
-      <div class="pillar-card">
-        <span class="pillar-badge">Systems</span>
-        <h3>Server Infrastructure</h3>
-        <ul>
-          <li>Microsoft Windows Server 2025 Administration</li>
-          <li>Active Directory (AD DS), OUs & Kerberos Auth</li>
-          <li>DNS Lookup Zones & High-Availability DHCP Failover</li>
-          <li>Group Policy (GPO) & Granular NTFS File Permissions</li>
-        </ul>
-      </div>
+<section id="server"><div class="wrap"><h2 class="rv">Windows Server 2025 lab</h2><p class="sub rv">Pick a role to inspect what I built in the Active Directory forest.</p>
+<div class="roles rv"><div class="rl" id="rl"></div><div class="rp"><small id="rt"></small><h3 id="rh"></h3><p id="rd"></p><ul class="card" style="padding:0;border:0;background:none;--c:var(--iris)" id="ru"></ul></div></div></div></section>
 
-      <div class="pillar-card">
-        <span class="pillar-badge">Development</span>
-        <h3>Software & Automation</h3>
-        <ul>
-          <li>Computer Science Degree (KTU 2019 Scheme)</li>
-          <li>JavaScript (ES6+), HTML5, Responsive UI</li>
-          <li>Python, Flask RESTful APIs & PostgreSQL</li>
-          <li>OpenCV Computer Vision & AI Facial Embeddings</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section id="work"><div class="wrap"><h2 class="rv">Projects</h2><p class="sub rv">Production tools and academic systems. Open a card for the architecture notes.</p>
+<div class="chips rv" id="pf"><button class="chip on" data-f="all">All</button><button class="chip" data-f="ai">AI / Vision</button><button class="chip" data-f="web">Web apps</button><button class="chip" data-f="pos">POS</button></div>
+<div class="grid3" id="pg" style="margin-top:22px"></div></div></section>
 
-  <!-- Interactive Terminal 2.0 -->
-  <section class="section" id="terminal">
-    <div class="section-header">
-      <span class="section-eyebrow">telnet console0</span>
-      <h2 class="section-title">Console CLI</h2>
-      <p class="section-desc">Interactive terminal emulator. Query profiles, skills, and simulated network telemetry.</p>
-    </div>
-    
-    <div class="terminal-window">
-      <div class="terminal-bar">
-        <div class="terminal-dots">
-          <span class="tdot red"></span>
-          <span class="tdot yellow"></span>
-          <span class="tdot green"></span>
-        </div>
-        <span class="terminal-title">cisco-ios-cli — muhsin@kannur.net</span>
-        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald);">CONNECTED</span>
-      </div>
-      
-      <div class="terminal-out" id="termOutput" role="log"></div>
-      
-      <form class="terminal-form" id="termForm" autocomplete="off">
-        <label class="term-prompt" for="termInput">Muhsin#</label>
-        <input class="terminal-input" id="termInput" type="text" placeholder="Type 'help' or tap a chip" spellcheck="false" autocomplete="off">
-      </form>
-      
-      <div class="terminal-chips">
-        <button class="tchip-btn" type="button" data-cmd="help">help</button>
-        <button class="tchip-btn" type="button" data-cmd="show profile">show profile</button>
-        <button class="tchip-btn" type="button" data-cmd="show skills">show skills</button>
-        <button class="tchip-btn" type="button" data-cmd="show server">show server</button>
-        <button class="tchip-btn" type="button" data-cmd="show projects">show projects</button>
-        <button class="tchip-btn" type="button" data-cmd="ping 8.8.8.8">ping 8.8.8.8</button>
-        <button class="tchip-btn" type="button" data-cmd="clear">clear</button>
-      </div>
-    </div>
-  </section>
+<section id="path"><div class="wrap"><h2 class="rv">Journey</h2><p class="sub rv">Industry support, student leadership and a CS degree.</p>
+<div class="tl rv">
+<article><small>3 months · IT & Networking Solutions Provider</small><h3>Network Support Assistant</h3><ul><li>Configured Cisco routers, switches and 802.1Q VLANs in live office networks.</li><li>Executed router password recovery and ROMMON bypass.</li><li>Troubleshot cabling, duplex mismatches and IP connectivity.</li></ul></article>
+<article><small>Inter-state corporate tour</small><h3>Student Convener, Delhi Industrial Visit</h3><ul><li>Coordinated corporate visits, travel logistics and facility liaison for the graduating batch.</li></ul></article>
+<article><small>APJ Abdul Kalam Technological University, Kannur</small><h3>B.Tech, Computer Science & Engineering</h3><ul><li>Computer Networks, OS, DBMS, Cryptography, System Software.</li></ul></article>
+</div></div></section>
 
-  <!-- Skills Matrix -->
-  <section class="section" id="skills">
-    <div class="section-header">
-      <span class="section-eyebrow">show interfaces status</span>
-      <h2 class="section-title">Skills & Interfaces</h2>
-      <p class="section-desc">Hardware interface mapping of networking, systems, and software competencies.</p>
-    </div>
-    
-    <div class="skills-tabs" id="skillTabs">
-      <button class="tab-btn active" type="button" data-filter="all">All</button>
-      <button class="tab-btn" type="button" data-filter="net">Networking</button>
-      <button class="tab-btn" type="button" data-filter="sys">Systems</button>
-      <button class="tab-btn" type="button" data-filter="dev">Software</button>
-    </div>
-    
-    <div class="table-wrap">
-      <table class="skills-table">
-        <thead>
-          <tr>
-            <th>Port</th>
-            <th>Domain</th>
-            <th>Competencies</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="skillRows">
-          <tr data-cat="net">
-            <td class="port-tag">Gi0/1</td>
-            <td><strong>Cisco CCNA</strong></td>
-            <td>Routing, switching, IPv4/IPv6, VLSM, VLANs, ACLs</td>
-            <td><span class="dot-indicator"></span>Certified</td>
-          </tr>
-          <tr data-cat="net">
-            <td class="port-tag">Gi0/2</td>
-            <td><strong>VLANs & Trunking</strong></td>
-            <td>802.1Q encapsulation, VTP, router-on-a-stick</td>
-            <td><span class="dot-indicator"></span>Hands-on</td>
-          </tr>
-          <tr data-cat="net">
-            <td class="port-tag">Gi0/3</td>
-            <td><strong>Routing Protocols</strong></td>
-            <td>OSPF, Static routes, default routing, NAT/PAT</td>
-            <td><span class="dot-indicator"></span>Hands-on</td>
-          </tr>
-          <tr data-cat="net">
-            <td class="port-tag">Gi0/4</td>
-            <td><strong>Troubleshooting</strong></td>
-            <td>Cisco password recovery & ROMMON bypass</td>
-            <td><span class="dot-indicator"></span>Hands-on</td>
-          </tr>
-          <tr data-cat="sys">
-            <td class="port-tag">Gi0/5</td>
-            <td><strong>Windows Server 2025</strong></td>
-            <td>AD DS domain, DNS zones, DHCP failover, GPOs</td>
-            <td><span class="dot-indicator"></span>Completed</td>
-          </tr>
-          <tr data-cat="dev">
-            <td class="port-tag">Gi0/6</td>
-            <td><strong>Web Frontend</strong></td>
-            <td>HTML5, CSS3, JavaScript ES6+, localStorage</td>
-            <td><span class="dot-indicator"></span>Production</td>
-          </tr>
-          <tr data-cat="dev">
-            <td class="port-tag">Gi0/7</td>
-            <td><strong>Python & Backend</strong></td>
-            <td>Flask RESTful APIs, OpenCV integration, PostgreSQL</td>
-            <td><span class="dot-indicator"></span>Production</td>
-          </tr>
-          <tr data-cat="dev">
-            <td class="port-tag">Gi0/8</td>
-            <td><strong>Computer Vision</strong></td>
-            <td>InsightFace, ArcFace, DeepFace facial matching</td>
-            <td><span class="dot-indicator"></span>Project</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Windows Server 2025 Dashboard -->
-  <section class="section" id="server">
-    <div class="section-header">
-      <span class="section-eyebrow">show windows-server</span>
-      <h2 class="section-title">Windows Server 2025</h2>
-      <p class="section-desc">Interactive role inspector simulating an enterprise Active Directory forest.</p>
-    </div>
-    
-    <div class="server-manager-wrap">
-      <div class="sm-nav-pane" id="smNavPane">
-        <button class="sm-role-btn active" type="button" data-role="ad">Active Directory (AD DS)</button>
-        <button class="sm-role-btn" type="button" data-role="adc">Second DC (ADC)</button>
-        <button class="sm-role-btn" type="button" data-role="dns">DNS Lookup Zones</button>
-        <button class="sm-role-btn" type="button" data-role="dhcp">DHCP Failover</button>
-        <button class="sm-role-btn" type="button" data-role="gpo">Group Policy (GPO)</button>
-        <button class="sm-role-btn" type="button" data-role="files">File Shares & NTFS</button>
-      </div>
-      
-      <div class="sm-detail-pane">
-        <span class="sm-tag" id="smTag">Directory Services</span>
-        <h3 class="sm-title" id="smTitle">Active Directory Domain Services</h3>
-        <p class="sm-desc" id="smDesc">Central identity database managing users, computers, and group policies.</p>
-        <ul class="sm-tasks-list" id="smTasks"></ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Software Engineering Projects -->
-  <section class="section" id="projects">
-    <div class="section-header">
-      <span class="section-eyebrow">show running-config</span>
-      <h2 class="section-title">Engineered Projects</h2>
-      <p class="section-desc">Production applications and software systems built with modern engineering standards.</p>
-    </div>
-    
-    <div class="skills-tabs" id="projectFilterTabs">
-      <button class="tab-btn active" type="button" data-pcat="all">All</button>
-      <button class="tab-btn" type="button" data-pcat="ai">AI / Vision</button>
-      <button class="tab-btn" type="button" data-pcat="web">Web Apps</button>
-      <button class="tab-btn" type="button" data-pcat="pos">POS Systems</button>
-    </div>
-    
-    <div class="projects-grid" id="projectsGrid">
-      <article class="project-card" data-pcat="ai">
-        <div class="proj-tag-badge">Final Year Project · AI</div>
-        <h3 class="proj-title">Missing Person CCTV Identification</h3>
-        <p class="proj-summary">Face recognition system matching missing persons across video streams using vector embeddings.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">Python</span><span class="tech-chip">Flask</span><span class="tech-chip">ArcFace</span><span class="tech-chip">OpenCV</span><span class="tech-chip">PostgreSQL</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p1">Architecture</button>
-        </div>
-        <div class="proj-expandable" id="p1-detail" style="display: none;">
-          <p>Extracts 512-D facial vectors, deduplicates video frames, and presents an investigator search interface.</p>
-        </div>
-      </article>
-
-      <article class="project-card" data-pcat="pos">
-        <div class="proj-tag-badge">Commercial · Production POS</div>
-        <h3 class="proj-title">M Ummerkutty Store Billing & POS</h3>
-        <p class="proj-summary">Lightweight retail POS system with dynamic weight-price calculation and instant WhatsApp receipt sharing.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">JavaScript</span><span class="tech-chip">HTML5 Canvas</span><span class="tech-chip">Thermal Print</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p2">Architecture</button>
-        </div>
-        <div class="proj-expandable" id="p2-detail" style="display: none;">
-          <p>Bidirectional price recalculation, persistent daily rates, receipt canvas rendering, and 1-tap WhatsApp sharing.</p>
-        </div>
-      </article>
-
-      <article class="project-card" data-pcat="web">
-        <div class="proj-tag-badge">Health Tech · Nutrition</div>
-        <h3 class="proj-title">KeralaDiet Nutrition Tracker</h3>
-        <p class="proj-summary">Calorie and water tracker built around 300+ authentic Kerala & Malabar food database.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">Mobile First</span><span class="tech-chip">SVG Rings</span><span class="tech-chip">localStorage</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p3">Architecture</button>
-        </div>
-        <div class="proj-expandable" id="p3-detail" style="display: none;">
-          <p>Kerala regional food nutrition calculations, streak preserving local storage, and macro percentage rings.</p>
-        </div>
-      </article>
-
-      <article class="project-card" data-pcat="web">
-        <div class="proj-tag-badge">Fitness Tech · Live App</div>
-        <h3 class="proj-title">PPL 6-Day Fitness Tracker</h3>
-        <p class="proj-summary">Dark-mode workout tracker for push-pull-legs routines with step and sleep logger.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">JavaScript</span><span class="tech-chip">CSS</span><span class="tech-chip">localStorage</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p4">Architecture</button>
-          <a href="https://muhsinmusi560.github.io" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600;">Launch ↗</a>
-        </div>
-        <div class="proj-expandable" id="p4-detail" style="display: none;">
-          <p>100% client-side privacy-first workout logger requiring no accounts.</p>
-        </div>
-      </article>
-
-      <article class="project-card" data-pcat="pos">
-        <div class="proj-tag-badge">Municipal · Mini Project</div>
-        <h3 class="proj-title">Building Registration & Tax</h3>
-        <p class="proj-summary">Municipal property registry for building permits, ownership transfers, and automated tax assessment.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">Web Architecture</span><span class="tech-chip">Relational Schema</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p5">Architecture</button>
-        </div>
-        <div class="proj-expandable" id="p5-detail" style="display: none;">
-          <p>Maintains immutable municipal audit trail and automated tax computation by area.</p>
-        </div>
-      </article>
-
-      <article class="project-card" data-pcat="web">
-        <div class="proj-tag-badge">Productivity</div>
-        <h3 class="proj-title">Daily Routine & Habit Tracker</h3>
-        <p class="proj-summary">Frictionless habit streak tracker with instant check-ins and offline local storage.</p>
-        <div class="proj-tech-chips">
-          <span class="tech-chip">HTML5</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span>
-        </div>
-        <div class="proj-actions">
-          <button class="proj-detail-toggle" type="button" data-proj="p6">Architecture</button>
-        </div>
-        <div class="proj-expandable" id="p6-detail" style="display: none;">
-          <p>Tactile streak calendar with zero lag and automatic midnight reset.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Experience & Education -->
-  <section class="section" id="experience">
-    <div class="section-header">
-      <span class="section-eyebrow">show logging</span>
-      <h2 class="section-title">Journey</h2>
-      <p class="section-desc">Practical industry support experience, student leadership, and computer science graduation.</p>
-    </div>
-    
-    <div class="timeline">
-      <div class="tl-item">
-        <h3 class="tl-title">Network Support Assistant</h3>
-        <span class="tl-meta">IT & Networking Solutions Provider · 3 Months Experience</span>
-        <ul class="tl-bullets">
-          <li>Configured Cisco routers, switches, and 802.1Q VLANs in live office networks.</li>
-          <li>Executed Cisco router password recovery and ROMMON bypass procedures.</li>
-          <li>Troubleshot physical cabling, duplex mismatches, and IP connectivity.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item">
-        <h3 class="tl-title">Student Convener · Delhi Industrial Visit</h3>
-        <span class="tl-meta">College Engineering Batch · Inter-State Corporate Tour</span>
-        <ul class="tl-bullets">
-          <li>Coordinated corporate visits, travel logistics, and facility liaison for the graduating batch.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item">
-        <h3 class="tl-title">B.Tech, Computer Science & Engineering</h3>
-        <span class="tl-meta">APJ Abdul Kalam Technological University (KTU) · Kannur</span>
-        <ul class="tl-bullets">
-          <li>Coursework: Computer Networks, OS, DBMS, Cryptography, System Software.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Instagram Bio Tools -->
-  <section class="section" id="contact">
-    <div class="contact-container">
-      <span class="section-eyebrow">ping muhsin.kannur</span>
-      <h2 class="section-title" style="margin-top: 4px;">Get in Touch</h2>
-      <p class="section-desc">Actively seeking roles in Network Administration, Systems Engineering, IT Support, or SOC / Cybersecurity.</p>
-      
-      <div class="contact-cards-grid">
-        <div class="contact-row-card">
-          <div>
-            <div class="crc-label">WhatsApp (Instant)</div>
-            <div class="crc-val">+91 77365 43153</div>
-          </div>
-          <a class="btn-copy-tactile" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">Chat Now</a>
-        </div>
-        
-        <div class="contact-row-card">
-          <div>
-            <div class="crc-label">Email</div>
-            <div class="crc-val" id="emailVal">muhsinmuhammad7831@gmail.com</div>
-          </div>
-          <button class="btn-copy-tactile copy-trigger" type="button" data-copy="muhsinmuhammad7831@gmail.com">Copy Email</button>
-        </div>
-
-        <div class="contact-row-card">
-          <div>
-            <div class="crc-label">Phone</div>
-            <div class="crc-val">+91 77365 43153</div>
-          </div>
-          <a class="btn-copy-tactile" href="tel:+917736543153">Call Direct</a>
-        </div>
-
-        <div class="contact-row-card">
-          <div>
-            <div class="crc-label">GitHub</div>
-            <div class="crc-val">github.com/muhsinmusi560</div>
-          </div>
-          <a class="btn-copy-tactile" href="https://github.com/muhsinmusi560" target="_blank" rel="noopener">Open Profile</a>
-        </div>
-      </div>
-      
-      <div class="mobile-profile-actions">
-        <button class="btn-vcard" id="btnDownloadVCard" type="button">
-          <span>💾 Save Contact to Phone (.vcf)</span>
-        </button>
-        <button class="btn-share" id="btnSharePortfolio" type="button">
-          <span>🔗 Share Portfolio</span>
-        </button>
-      </div>
-    </div>
-  </section>
+<section id="contact" class="dk"><div class="wrap"><h2 class="rv">Let’s work together</h2><p class="sub rv">Looking for roles in network administration, systems engineering, IT support or SOC and cybersecurity.</p>
+<div class="cta rv">
+<a class="card" href="https://wa.me/917736543153?text=Hi%20Muhsin%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener" style="--c:var(--mint)"><small>WhatsApp, fastest reply</small><b>+91 77365 43153</b></a>
+<button class="card" data-copy="muhsinmuhammad7831@gmail.com" style="--c:var(--amber);text-align:left"><small>Email, tap to copy</small><b>muhsinmuhammad7831@gmail.com</b></button>
+<a class="card" href="tel:+917736543153" style="--c:var(--iris)"><small>Call direct</small><b>+91 77365 43153</b></a>
+<a class="card" href="https://github.com/muhsinmusi560" target="_blank" rel="noopener" style="--c:var(--amber)"><small>GitHub</small><b>github.com/muhsinmusi560</b></a>
+</div>
+<div class="btns" style="margin-top:22px"><button class="btn main" data-vcf>Save contact (.vcf)</button><button class="btn" id="share">Share portfolio</button></div></div></section>
 </main>
-
-<footer>
-  <div class="container">
-    <p>© 2026 Muhsin Muhammad A T · Computer Science & Network Engineer · <a href="#hero">↑ Back to Top</a></p>
-  </div>
-</footer>
-
-<div class="toast-msg" id="toastBox">
-  <span id="toastText">Action completed</span>
-</div>
+<footer>© 2026 Muhsin Muhammad A T · Computer Science & Network Engineer · <a href="#top" style="text-decoration:underline">Back to top</a></footer>
+<div class="toast" id="toast"></div>
 
 <script>
-(function() {
-  'use strict';
-  
-  var $ = function(sel, p) { return (p || document).querySelector(sel); };
-  var $$ = function(sel, p) { return Array.prototype.slice.call((p || document).querySelectorAll(sel)); };
-  var root = document.documentElement;
+(function(){
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,root=document.documentElement;
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('show')},2200)}
+function copy(s,m){try{navigator.clipboard.writeText(s).then(function(){toast(m||'Copied')},function(){toast(s)})}catch(e){toast(s)}}
 
-  /* Theme Switcher */
-  var themeToggle = $('#themeToggle');
-  var themeIcon = $('#themeIcon');
-  
-  function getTheme() {
-    try {
-      var saved = localStorage.getItem('mm-theme-pro-v4');
-      if (saved === 'dark' || saved === 'light') return saved;
-    } catch(e) {}
-    return 'dark';
-  }
-  
-  function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    try { localStorage.setItem('mm-theme-pro-v4', theme); } catch(e) {}
-    if (typeof readMeshColors === 'function') readMeshColors();
-  }
-  applyTheme(getTheme());
-  
-  themeToggle.addEventListener('click', function() {
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    showToast(next === 'dark' ? 'Dark mode enabled' : 'Light mode enabled');
-  });
+/* theme */
+$('#tog').onclick=function(){root.dataset.theme=root.dataset.theme==='light'?'dark':'light'};
 
-  /* Progress & Dock Tracking */
-  var scrollProgress = $('#scrollProgress');
-  var dockLinks = $$('.dock-link');
-  var sections = dockLinks.map(function(l) { return document.getElementById(l.getAttribute('href').replace('#', '')); });
-  
-  window.addEventListener('scroll', function() {
-    var total = root.scrollHeight - window.innerHeight;
-    var p = total > 0 ? Math.min(1, Math.max(0, window.scrollY / total)) : 0;
-    scrollProgress.style.transform = 'scaleX(' + p + ')';
-    
-    var pos = window.scrollY + 100;
-    var idx = 0;
-    for (var i = 0; i < sections.length; i++) {
-      if (sections[i] && sections[i].offsetTop <= pos) idx = i;
-    }
-    dockLinks.forEach(function(l, i) { l.classList.toggle('active', i === idx); });
-  }, { passive: true });
+/* progress, glow, active nav */
+var bar=$('#bar'),glow=$('#glow');
+addEventListener('scroll',function(){var h=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+addEventListener('pointermove',function(e){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+var secs=$$('main section'),lk=$$('#links a');
+var navIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)lk.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(function(s){navIO.observe(s)});
 
-  /* Clock */
-  var kannurClock = $('#kannurClock');
-  function tickClock() {
-    try {
-      kannurClock.textContent = new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true, timeZone: 'Asia/Kolkata'
-      }).format(new Date()) + ' IST';
-    } catch(e) { kannurClock.textContent = 'IST'; }
-  }
-  tickClock();
-  setInterval(tickClock, 1000);
+/* reveal + counters */
+var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');rio.unobserve(e.target);$$('[data-n]',e.target).forEach(count);$$('.meter i',e.target).forEach(function(m){m.style.width=m.dataset.w+'%'})})},{threshold:.15});
+$$('.rv').forEach(function(el){rio.observe(el)});
+function count(el){var n=+el.dataset.n,s=el.dataset.s||'',t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1200);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+s;if(p<1&&!rm)requestAnimationFrame(f);else el.textContent=n+s})(t0)}
 
-  /* Typer */
-  var typedEl = $('#typedPhrase');
-  var phrases = [
-    'configuring routers and switches',
-    'deploying Windows Server 2025 forest',
-    'engineering full-stack web applications',
-    'automating enterprise network infrastructure'
-  ];
-  var pIdx = 0, cIdx = 0, deleting = false;
-  function stepTyper() {
-    var cur = phrases[pIdx];
-    if (deleting) {
-      typedEl.textContent = cur.substring(0, cIdx - 1);
-      cIdx--;
-      if (cIdx <= 0) { deleting = false; pIdx = (pIdx + 1) % phrases.length; setTimeout(stepTyper, 300); return; }
-      setTimeout(stepTyper, 30);
-    } else {
-      typedEl.textContent = cur.substring(0, cIdx + 1);
-      cIdx++;
-      if (cIdx >= cur.length) { deleting = true; setTimeout(stepTyper, 2400); return; }
-      setTimeout(stepTyper, 60);
-    }
-  }
-  if (typedEl) setTimeout(stepTyper, 1500);
+/* typed roles */
+var roles=['Software Engineer','Network Administrator','Windows Server Specialist','Python & Flask Developer'],ri=0,ci=0,del=false,re=$('#role');
+(function tick(){var w=roles[ri];re.textContent=w.slice(0,ci);if(rm){re.textContent=w;return}
+if(!del&&ci===w.length){del=true;return setTimeout(tick,1600)}
+if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+ci+=del?-1:1;setTimeout(tick,del?35:70)})();
 
-  /* Topology */
-  var TOPOLOGY = {
-    wan: { title: "WAN Link · Gateway", sub: "203.0.113.1 /30", cli: "WAN# show ip route\nS* 0.0.0.0/0 [1/0] via 203.0.113.1" },
-    r1:  { title: "Router R1 · Cisco 2911", sub: "192.168.10.1 /24", cli: "R1# show ip int brief\nGi0/0 192.168.10.1 up/up\nSe0/0/0 203.0.113.2 up/up" },
-    sw1: { title: "Switch SW1 · Catalyst 2960", sub: "VLAN 10, VLAN 20", cli: "SW1# show vlan brief\n10 STAFF active Fa0/2, Fa0/3\n20 SERVER active Fa0/1" },
-    srv: { title: "SRV-2025 · Domain Controller", sub: "192.168.10.10 /24", cli: "PS C:\\> Get-Service adws, dnscache, dhcpserver\nStatus: Running (AD DS, DNS, DHCP)" },
-    pc1: { title: "Admin-PC1 · Workstation", sub: "192.168.10.51 /24", cli: "C:\\> ipconfig\nIPv4: 192.168.10.51  GW: 192.168.10.1" },
-    pc2: { title: "Client-PC2 · Workstation", sub: "192.168.10.52 /24", cli: "C:\\> gpresult /r\nApplied: Default Domain Policy" }
-  };
-  var nodeGroups = $$('.node-group');
-  var tiTitle = $('#tiTitle');
-  var tiSub = $('#tiSub');
-  var tiCli = $('#tiCli');
-  
-  function pickNode(k) {
-    var d = TOPOLOGY[k];
-    if (!d) return;
-    nodeGroups.forEach(function(g) { g.classList.toggle('active', g.getAttribute('data-node') === k); });
-    tiTitle.textContent = d.title;
-    tiSub.textContent = d.sub;
-    tiCli.textContent = d.cli;
-  }
-  nodeGroups.forEach(function(g) {
-    g.addEventListener('click', function() { pickNode(g.getAttribute('data-node')); });
-  });
+/* topology */
+var cap=$('#cap'),svg=$('#svg'),NS='http://www.w3.org/2000/svg';
+$$('.nd').forEach(function(n){n.setAttribute('tabindex','0');n.setAttribute('role','button');n.addEventListener('focus',function(){cap.textContent=n.dataset.i});var show=function(){cap.textContent=n.dataset.i};n.addEventListener('mouseenter',show);n.addEventListener('click',show)});
+function packet(ids,col,done){if(rm){done&&done();return}
+var c=document.createElementNS(NS,'circle');c.setAttribute('r',5);c.setAttribute('fill',col);svg.appendChild(c);
+var k=0;(function seg(){if(k>=ids.length){c.remove();done&&done();return}
+var rev=ids[k][0]==='-',p=$('#'+(rev?ids[k].slice(1):ids[k])),L=p.getTotalLength(),t0=performance.now();k++;
+(function f(t){var q=Math.min(1,(t-t0)/450),pt=p.getPointAtLength((rev?1-q:q)*L);c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);if(q<1)requestAnimationFrame(f);else seg()})(t0)})()}
+var routes=[['l3','l6'],['l3','l7'],['l2','l4'],['l2','l5']];
+if(!rm)setInterval(function(){if(document.hidden)return;var r=routes[Math.random()*4|0];packet(r,'#5eeab0')},1700);
+$('#ping').onclick=function(){cap.textContent='Reply from 8.8.8.8: bytes=32 time=18ms TTL=117';packet(['-l4','-l2','-l1','l1','l2','l4'],'#ffbe55')};
 
-  var btnSimPing = $('#btnSimPing');
-  btnSimPing.addEventListener('click', function() {
-    btnSimPing.disabled = true;
-    btnSimPing.textContent = 'Pinging...';
-    pickNode('r1');
-    tiTitle.textContent = "ICMP Ping: PC1 ➔ WAN";
-    tiCli.textContent = "PC1# ping 203.0.113.1\nReply from 203.0.113.1: bytes=64 time=1.3ms TTL=62\nSuccess rate: 100% (5/5)";
-    setTimeout(function() {
-      btnSimPing.disabled = false;
-      btnSimPing.textContent = '⚡ Ping WAN';
-      showToast('Ping 203.0.113.1: 100% success');
-    }, 1200);
-  });
+/* terminal */
+var out=$('#out'),hist=[],hi=0;
+function pr(t,c){var d=document.createElement('div');if(c)d.className=c;d.textContent=t;out.appendChild(d);out.scrollTop=out.scrollHeight}
+var CM={
+help:function(){pr('Commands: show profile | show skills | show server | show projects | ping 8.8.8.8 | clear','d')},
+'show profile':function(){pr('Muhsin Muhammad A T\nSoftware Engineer · Network & Systems Specialist\nCisco CCNA (200-301) · Windows Server 2025 · B.Tech CSE\nLocation: Kannur, Kerala, India','g')},
+'show skills':function(){SK.forEach(function(s){pr(s.n+'  ['+s.s+']')})},
+'show server':function(){RL.forEach(function(r){pr('• '+r.h+': '+r.d)})},
+'show projects':function(){PJ.forEach(function(p){pr('• '+p.t+' ('+p.k+')')})},
+'ping 8.8.8.8':function(){['Sending 4 ICMP echos to 8.8.8.8...','!!!!','Success rate is 100 percent (4/4), round-trip avg 18 ms'].forEach(function(l,i){setTimeout(function(){pr(l,'g')},i*350)})},
+clear:function(){out.textContent=''}};
+function run(v){v=v.trim().toLowerCase();if(!v)return;pr('Muhsin# '+v,'c');hist.push(v);hi=hist.length;(CM[v]||function(){pr('% Invalid input detected. Type help.','d')})()}
+$('#tf').onsubmit=function(e){e.preventDefault();run($('#ti').value);$('#ti').value=''};
+$('#ti').onkeydown=function(e){if(e.key==='ArrowUp'&&hi>0)$('#ti').value=hist[--hi];if(e.key==='ArrowDown')$('#ti').value=hi<hist.length-1?hist[++hi]:(hi=hist.length,'')};
+$$('#tc .chip').forEach(function(b){b.onclick=function(){run(b.dataset.c)}});
+pr('Cisco IOS simulator ready. Type help.','d');
 
-  /* Terminal */
-  var termOutput = $('#termOutput');
-  var termInput = $('#termInput');
-  var termForm = $('#termForm');
-  var hist = [], hIdx = -1;
+/* skills */
+var SK=[
+{n:'Cisco CCNA',d:'Routing, switching, IPv4/IPv6, VLSM, ACLs',s:'Certified',c:'net',w:90},
+{n:'VLANs & trunking',d:'802.1Q, VTP, router-on-a-stick',s:'Hands-on',c:'net',w:85},
+{n:'Routing protocols',d:'OSPF, static and default routes, NAT/PAT',s:'Hands-on',c:'net',w:82},
+{n:'Troubleshooting',d:'Password recovery and ROMMON bypass',s:'Hands-on',c:'net',w:80},
+{n:'Windows Server 2025',d:'AD DS, DNS zones, DHCP failover, GPOs',s:'Completed',c:'sys',w:88},
+{n:'Web frontend',d:'HTML5, CSS3, JavaScript ES6+, localStorage',s:'Production',c:'dev',w:90},
+{n:'Python & backend',d:'Flask REST APIs, OpenCV, PostgreSQL',s:'Production',c:'dev',w:84},
+{n:'Computer vision',d:'InsightFace, ArcFace, DeepFace matching',s:'Project',c:'dev',w:72}];
+function skills(f){$('#sg').innerHTML=SK.filter(function(s){return f==='all'||s.c===f}).map(function(s){return '<div><p>'+s.n+'<em>'+s.s+'</em></p><small>'+s.d+'</small><span class="meter"><i data-w="'+s.w+'"></i></span></div>'}).join('');setTimeout(function(){$$('#sg .meter i').forEach(function(m){m.style.width=m.dataset.w+'%'})},60)}
+function chips(id,fn){$$(id+' .chip').forEach(function(b){b.onclick=function(){$$(id+' .chip').forEach(function(x){x.classList.toggle('on',x===b)});fn(b.dataset.f)}})}
+chips('#sf',skills);skills('all');
 
-  function termEcho(cmd) {
-    var d = document.createElement('div');
-    d.innerHTML = '<span style="color: var(--cyan); font-weight: 700;">Muhsin#</span> ' + cmd;
-    termOutput.appendChild(d);
-  }
-  function termLine(html) {
-    var d = document.createElement('div');
-    d.innerHTML = html;
-    termOutput.appendChild(d);
-    termOutput.scrollTop = termOutput.scrollHeight;
-  }
+/* server roles */
+var RL=[
+{k:'ad',h:'Active Directory (AD DS)',t:'Directory',d:'Central identity database for users and joined computers.',u:['Forest root kannur.local','OU schema and delegation','User creation and password policies']},
+{k:'adc',h:'Additional Domain Controller',t:'Redundancy',d:'Replicates AD DS partitions for zero downtime.',u:['Promoted SRV2 to the domain','Multi-master replication verified','Cross-configured DNS forwarders']},
+{k:'dns',h:'Enterprise DNS',t:'Name resolution',d:'AD-integrated zones with Kerberos SRV records.',u:['Forward and reverse lookup zones','SRV records (_ldap, _kerberos)','External forwarders']},
+{k:'dhcp',h:'DHCP & failover',t:'IP allocation',d:'Automated leases with hot-standby scope replication.',u:['Authorized in Active Directory','Scope 192.168.10.50 to .150','Failover relationship configured']},
+{k:'gpo',h:'Group Policy',t:'Policy',d:'Central enforcement of desktop security and mapped shares.',u:['Password complexity and lockout','Restricted USB mass storage','Automated drive mapping']},
+{k:'fs',h:'File shares & NTFS',t:'Storage',d:'Granular NTFS and share permissions with access-based enumeration.',u:['Departmental network shares','NTFS security groups','Volume shadow copies']}];
+$('#rl').innerHTML=RL.map(function(r,i){return '<button data-i="'+i+'">'+r.h+'</button>'}).join('');
+function role(i){var r=RL[i];$$('#rl button').forEach(function(b,j){b.classList.toggle('on',j===i)});$('#rt').textContent=r.t;$('#rh').textContent=r.h;$('#rd').textContent=r.d;$('#ru').innerHTML=r.u.map(function(x){return '<li>'+x+'</li>'}).join('')}
+$$('#rl button').forEach(function(b){b.onclick=function(){role(+b.dataset.i)}});role(0);
 
-  var CMDS = {
-    help: function() {
-      termLine('<span style="color: var(--cyan);">Commands:</span> show profile, show skills, show server, show projects, ping &lt;host&gt;, clear');
-    },
-    profile: function() {
-      termLine('Muhsin Muhammad A T · CCNA Certified · B.Tech Computer Science Engineering (KTU)<br>Windows Server 2025 Admin · Kannur, Kerala · Open to work');
-    },
-    skills: function() {
-      termLine('Gi0/1: CCNA · Gi0/2: VLANs & Trunking · Gi0/3: OSPF · Gi0/5: Windows Server 2025 · Gi0/6: JavaScript ES6+ · Gi0/7: Python & Flask');
-    },
-    server: function() {
-      termLine('Two-Server Domain (kannur.local) · AD DS, DNS Zones, DHCP Failover, Group Policy (GPO)');
-    },
-    projects: function() {
-      termLine('1. Missing Person CCTV AI  2. M Ummerkutty Store POS  3. KeralaDiet Tracker  4. PPL Fitness Tracker');
-    }
-  };
+/* projects */
+var PJ=[
+{c:'ai',k:'Final year project · AI',t:'Missing Person CCTV Identification',d:'Face recognition that matches missing persons across video streams using vector embeddings.',g:['Python','Flask','ArcFace','OpenCV','PostgreSQL'],m:'Extracts 512-D facial vectors, deduplicates video frames and offers an investigator search interface.',x:'--c:var(--iris)'},
+{c:'pos',k:'Commercial · Production POS',t:'M Ummerkutty Store Billing',d:'Lightweight retail POS with weight-price calculation and instant WhatsApp receipts.',g:['JavaScript','Canvas','Thermal print'],m:'Bidirectional price recalculation, persistent daily rates, receipt canvas rendering, one-tap WhatsApp sharing.',x:'--c:var(--amber)'},
+{c:'web',k:'Health tech · Nutrition',t:'KeralaDiet Tracker',d:'Calorie and water tracker built on a 300+ item Kerala and Malabar food database.',g:['Mobile first','SVG rings','localStorage'],m:'Regional nutrition calculations, streak-preserving storage and macro percentage rings.',x:'--c:var(--mint)'},
+{c:'web',k:'Fitness tech · Live app',t:'PPL 6-Day Fitness Tracker',d:'Dark-mode push-pull-legs workout tracker with step and sleep logging.',g:['JavaScript','CSS','localStorage'],m:'100% client-side, privacy-first logger that needs no account.',x:'--c:var(--amber)',u:'https://muhsinmusi560.github.io'},
+{c:'web',k:'Municipal · Mini project',t:'Building Registration & Tax',d:'Property registry for permits, ownership transfers and automated tax assessment.',g:['Web architecture','Relational schema'],m:'Keeps an immutable municipal audit trail and computes tax by area.',x:'--c:var(--iris)'},
+{c:'web',k:'Productivity',t:'Daily Routine & Habit Tracker',d:'Frictionless habit streaks with instant check-ins and offline storage.',g:['HTML5','CSS','JavaScript'],m:'Tactile streak calendar with zero lag and automatic midnight reset.',x:'--c:var(--mint)'}];
+function projects(f){$('#pg').innerHTML=PJ.filter(function(p){return f==='all'||p.c===f}).map(function(p,i){return '<div class="card pj" style="'+p.x+'"><span class="k">'+p.k+'</span><h3>'+p.t+'</h3><p>'+p.d+'</p><div class="more">'+p.m+(p.u?' <a href="'+p.u+'" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:underline">Launch</a>':'')+'</div><div class="tags">'+p.g.map(function(g){return '<span>'+g+'</span>'}).join('')+'</div><button class="chip" style="align-self:flex-start">Architecture</button></div>'}).join('');
+$$('#pg .pj').forEach(function(c){c.querySelector('button').onclick=function(){c.classList.toggle('open')}})}
+chips('#pf',projects);projects('all');
+document.addEventListener('pointermove',function(e){var c=e.target.closest&&e.target.closest('.card');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});
 
-  function runCli(raw) {
-    var cmd = raw.trim();
-    if (!cmd) return;
-    termEcho(cmd);
-    hist.push(cmd);
-    hIdx = hist.length;
-    var low = cmd.toLowerCase();
-    
-    if (low === 'clear' || low === 'cls') { termOutput.innerHTML = ''; return; }
-    if (low === 'help' || low === '?') { CMDS.help(); return; }
-    if (/^ping\b/i.test(low)) {
-      var t = cmd.split(/\s+/)[1] || '8.8.8.8';
-      termLine('Sending 4 64-byte ICMP Echos to ' + t + '... Reply 1.3ms TTL=64 (100% success)');
-      return;
-    }
-    var clean = low.replace(/^show\s+/, '');
-    if (CMDS[clean]) { CMDS[clean](); return; }
-    termLine('<span style="color: var(--amber);">% Unrecognized command. Type "help".</span>');
-  }
-
-  termForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    runCli(termInput.value);
-    termInput.value = '';
-  });
-  termInput.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowUp' && hist.length && hIdx > 0) { hIdx--; termInput.value = hist[hIdx]; }
-    else if (e.key === 'ArrowDown') {
-      if (hIdx < hist.length - 1) { hIdx++; termInput.value = hist[hIdx]; }
-      else { hIdx = hist.length; termInput.value = ''; }
-    }
-  });
-  $$('.tchip-btn').forEach(function(b) {
-    b.addEventListener('click', function() { runCli(b.getAttribute('data-cmd')); });
-  });
-  termEcho('show profile');
-  CMDS.profile();
-
-  /* Skills Filter */
-  var skillRows = $$('#skillRows tr');
-  var skillTabs = $$('#skillTabs .tab-btn');
-  skillTabs.forEach(function(t) {
-    t.addEventListener('click', function() {
-      skillTabs.forEach(function(x) { x.classList.remove('active'); });
-      t.classList.add('active');
-      var f = t.getAttribute('data-filter');
-      skillRows.forEach(function(r) { r.style.display = (f === 'all' || r.getAttribute('data-cat') === f) ? '' : 'none'; });
-    });
-  });
-
-  /* Windows Server Roles */
-  var ROLES = {
-    ad:    { tag: "Directory", title: "Active Directory (AD DS)", desc: "Centralized identity database for users and joined computers.", tasks: ["Domain forest root (kannur.local)", "OU schema & delegation", "User creation & password policies"] },
-    adc:   { tag: "Redundancy", title: "Additional Domain Controller", desc: "Replicates AD DS directory partitions ensuring zero downtime.", tasks: ["Promoted SRV2 to domain", "Multi-master replication verified", "Cross-configured DNS forwarders"] },
-    dns:   { tag: "Name Resolution", title: "Enterprise DNS Server", desc: "Active Directory Integrated zones with Kerberos SRV records.", tasks: ["Forward & Reverse lookup zones", "SRV records (_ldap, _kerberos)", "External DNS forwarders"] },
-    dhcp:  { tag: "IP Allocation", title: "DHCP & Failover", desc: "Automates IP leases with Hot-Standby scope replication.", tasks: ["Authorized in Active Directory", "192.168.10.50–150 scope", "Failover relationship configured"] },
-    gpo:   { tag: "Policy", title: "Group Policy Objects", desc: "Centralized enforcement of desktop security & mapped shares.", tasks: ["Password complexity & lockout", "Restricted USB mass storage", "Automated drive mapping"] },
-    files: { tag: "Storage", title: "File Shares & Permissions", desc: "Granular NTFS & Share permissions with Access-Based Enumeration.", tasks: ["Departmental network shares", "NTFS security groups", "Volume shadow copies"] }
-  };
-  var smBtns = $$('.sm-role-btn'), smTag = $('#smTag'), smTitle = $('#smTitle'), smDesc = $('#smDesc'), smTasks = $('#smTasks');
-  function pickRole(k) {
-    var d = ROLES[k];
-    if (!d) return;
-    smBtns.forEach(function(b) { b.classList.toggle('active', b.getAttribute('data-role') === k); });
-    smTag.textContent = d.tag; smTitle.textContent = d.title; smDesc.textContent = d.desc;
-    smTasks.innerHTML = d.tasks.map(function(t) { return '<li>' + t + '</li>'; }).join('');
-  }
-  smBtns.forEach(function(b) { b.addEventListener('click', function() { pickRole(b.getAttribute('data-role')); }); });
-  pickRole('ad');
-
-  /* Projects Filter & Toggle */
-  var pCards = $$('.project-card'), pTabs = $$('#projectFilterTabs .tab-btn');
-  pTabs.forEach(function(t) {
-    t.addEventListener('click', function() {
-      pTabs.forEach(function(x) { x.classList.remove('active'); });
-      t.classList.add('active');
-      var f = t.getAttribute('data-pcat');
-      pCards.forEach(function(c) { c.style.display = (f === 'all' || c.getAttribute('data-pcat') === f) ? '' : 'none'; });
-    });
-  });
-  $$('.proj-detail-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var el = $('#' + btn.getAttribute('data-proj') + '-detail');
-      if (!el) return;
-      var open = el.style.display !== 'none';
-      el.style.display = open ? 'none' : 'block';
-      btn.classList.toggle('open', !open);
-    });
-  });
-
-  /* vCard Generator */
-  function downloadVCard() {
-    var v = [
-      "BEGIN:VCARD", "VERSION:3.0", "FN:Muhsin Muhammad A T",
-      "TITLE:Software Engineer & Network Administrator (CCNA Certified)",
-      "TEL;TYPE=CELL:+917736543153", "EMAIL:muhsinmuhammad7831@gmail.com",
-      "URL:https://muhsinmusi560.github.io/portfolioo/",
-      "ADR:;;Kannur;Kerala;;India", "END:VCARD"
-    ].join("\r\n");
-    var blob = new Blob([v], { type: "text/vcard;charset=utf-8" });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url; a.download = "Muhsin_Muhammad.vcf";
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    showToast("Contact card downloaded!");
-  }
-  var vBtn1 = $('#btnDownloadVCard'), vBtn2 = $('#heroVCardBtn');
-  if (vBtn1) vBtn1.addEventListener('click', downloadVCard);
-  if (vBtn2) vBtn2.addEventListener('click', downloadVCard);
-
-  /* Share */
-  var shareBtn = $('#btnSharePortfolio');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', function() {
-      if (navigator.share) {
-        navigator.share({ title: "Muhsin Muhammad A T · Portfolio", url: window.location.href }).catch(function() {});
-      } else {
-        copyText(window.location.href, "Portfolio link copied!");
-      }
-    });
-  }
-
-  /* Copy Buttons */
-  var toast = $('#toastBox'), toastT = $('#toastText'), tTimer = null;
-  function showToast(m) {
-    toastT.textContent = m; toast.classList.add('show');
-    clearTimeout(tTimer); tTimer = setTimeout(function() { toast.classList.remove('show'); }, 2400);
-  }
-  function copyText(str, msg) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(str).then(function() { showToast(msg || 'Copied!'); });
-    } else {
-      var ta = document.createElement('textarea'); ta.value = str; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-      showToast(msg || 'Copied!');
-    }
-  }
-  $$('.copy-trigger').forEach(function(btn) {
-    btn.addEventListener('click', function() { copyText(btn.getAttribute('data-copy'), 'Copied: ' + btn.getAttribute('data-copy')); });
-  });
-
-  /* Canvas Particle Mesh */
-  var canvas = $('#mesh'), ctx = canvas.getContext ? canvas.getContext('2d') : null;
-  var pts = [], mouse = { x: -999, y: -999 }, colD = '#06B6D4', colL = '#1E293B';
-  function readMeshColors() {
-    var d = root.getAttribute('data-theme') === 'dark';
-    colD = d ? '#06B6D4' : '#0284C7';
-    colL = d ? '#1E293B' : '#CBD5E1';
-  }
-  window.readMeshColors = readMeshColors;
-  function resizeCanvas() {
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    pts = [];
-    var n = Math.max(16, Math.min(36, Math.floor((window.innerWidth * window.innerHeight) / 32000)));
-    for (var i = 0; i < n; i++) {
-      pts.push({ x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4 });
-    }
-  }
-  function drawMesh() {
-    if (!ctx) return;
-    var w = window.innerWidth, h = window.innerHeight;
-    ctx.clearRect(0, 0, w, h);
-    for (var i = 0; i < pts.length; i++) {
-      var p = pts[i];
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > w) p.vx *= -1;
-      if (p.y < 0 || p.y > h) p.vy *= -1;
-      
-      for (var j = i + 1; j < pts.length; j++) {
-        var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 110) {
-          ctx.strokeStyle = colL; ctx.globalAlpha = (1 - d / 110) * 0.35;
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-        }
-      }
-      var mdx = p.x - mouse.x, mdy = p.y - mouse.y, md = Math.sqrt(mdx * mdx + mdy * mdy);
-      if (md < 120) {
-        ctx.strokeStyle = colD; ctx.globalAlpha = (1 - md / 120) * 0.65;
-        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-      ctx.fillStyle = colD; ctx.globalAlpha = 0.65;
-      ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, 6.28); ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-    requestAnimationFrame(drawMesh);
-  }
-  if (ctx) {
-    readMeshColors(); resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('pointermove', function(e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
-    window.addEventListener('pointerleave', function() { mouse.x = -999; mouse.y = -999; });
-    requestAnimationFrame(drawMesh);
-  }
+/* contact */
+$$('[data-copy]').forEach(function(b){b.onclick=function(){copy(b.dataset.copy,'Email copied')}});
+$$('[data-vcf]').forEach(function(b){b.onclick=function(){
+var v=['BEGIN:VCARD','VERSION:3.0','FN:Muhsin Muhammad A T','TITLE:Software Engineer & Network Administrator (CCNA Certified)','TEL;TYPE=CELL:+917736543153','EMAIL:muhsinmuhammad7831@gmail.com','ADR:;;Kannur;Kerala;;India','END:VCARD'].join('\r\n');
+var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Muhsin_Muhammad.vcf';document.body.appendChild(a);a.click();a.remove();toast('Contact card downloaded')}});
+$('#share').onclick=function(){if(navigator.share)navigator.share({title:'Muhsin Muhammad A T',url:location.href}).catch(function(){});else copy(location.href,'Link copied')};
 })();
 </script>
 </body>
